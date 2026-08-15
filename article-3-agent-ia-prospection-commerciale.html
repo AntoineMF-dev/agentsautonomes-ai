@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comment créer un agent IA pour automatiser sa prospection commerciale | AgentsAutonomes.ai</title>
+  <meta name="description" content="Tutoriel pratique pour automatiser sa prospection commerciale avec un agent IA : outils, étapes, exemples concrets. Sans coder." />
+  <link rel="canonical" href="https://agentsautonomes.ai/blog/agent-ia-automatiser-prospection-commerciale" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #0d0f12; --surface: #151820; --border: #1e2230; --accent: #00e5a0; --accent-dim: rgba(0,229,160,0.12); --text: #e8eaf0; --muted: #6b7080; --heading: #ffffff; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.75; }
+    header { border-bottom: 1px solid var(--border); padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--accent); text-decoration: none; }
+    .logo span { color: var(--heading); }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-left: 2rem; }
+    .hero { max-width: 760px; margin: 4rem auto 0; padding: 0 2rem; }
+    .tag { display: inline-block; background: var(--accent-dim); color: var(--accent); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 2px; margin-bottom: 1.5rem; }
+    h1 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; color: var(--heading); line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 1.25rem; }
+    .meta { color: var(--muted); font-size: 0.85rem; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+    article { max-width: 760px; margin: 0 auto; padding: 0 2rem 6rem; }
+    h2 { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--heading); margin: 3rem 0 1rem; }
+    h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--heading); margin: 2rem 0 0.75rem; }
+    p { margin-bottom: 1.25rem; }
+    .step { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 4px; padding: 1.5rem; margin: 1.5rem 0; }
+    .step-num { font-family: 'Syne', sans-serif; font-size: 0.75rem; font-weight: 600; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .step h3 { margin-top: 0; }
+    .step p { margin-bottom: 0; color: var(--text); }
+    .tool-list { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+    .tool { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 1.25rem; }
+    .tool-name { font-family: 'Syne', sans-serif; font-weight: 700; color: var(--heading); margin-bottom: 0.4rem; }
+    .tool-desc { font-size: 0.9rem; color: var(--muted); }
+    blockquote { border-left: 2px solid var(--accent); padding: 1rem 1.5rem; margin: 2rem 0; color: var(--muted); font-style: italic; }
+    .cta-box { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 2.5rem; text-align: center; margin: 4rem 0 2rem; }
+    .cta-box h3 { font-family: 'Syne', sans-serif; font-size: 1.4rem; color: var(--heading); margin: 0 0 0.75rem; }
+    .cta-box p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .btn { display: inline-block; background: var(--accent); color: #0d0f12; font-weight: 600; padding: 0.85rem 2rem; border-radius: 3px; text-decoration: none; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; color: var(--muted); font-size: 0.8rem; }
+    @media (max-width: 640px) { .tool-list { grid-template-columns: 1fr; } nav { display: none; } .hero, article { padding-left: 1.25rem; padding-right: 1.25rem; } }
+  </style>
+</head>
+<body>
+<header>
+  <a href="/" class="logo">agents<span>autonomes</span>.ai</a>
+  <nav><a href="/blog">Blog</a><a href="/newsletter">Newsletter</a></nav>
+</header>
+<div class="hero">
+  <div class="tag">Prospection</div>
+  <h1>Comment créer un agent IA pour automatiser sa prospection commerciale</h1>
+  <p class="meta">Août 2025 &nbsp;·&nbsp; 8 min de lecture</p>
+</div>
+<article>
+  <p>La prospection commerciale est l'une des tâches les plus chronophages et les moins aimées des équipes commerciales. Identifier des prospects qualifiés, rédiger des emails personnalisés, relancer au bon moment — tout ça peut facilement absorber 30 à 40% du temps d'un commercial. Un agent IA bien configuré change cette équation radicalement.</p>
+  <p>Voici comment construire un pipeline de prospection automatisé, sans écrire une ligne de code.</p>
+
+  <h2>Le pipeline complet en 5 étapes</h2>
+
+  <div class="step">
+    <div class="step-num">Étape 01</div>
+    <h3>Définir le profil de prospect idéal</h3>
+    <p>Avant tout, l'agent a besoin d'instructions précises : secteur d'activité, taille d'entreprise, poste du décideur, zone géographique, signaux déclencheurs (levée de fonds, recrutement, expansion). Plus le profil est précis, meilleure est la qualité des prospects identifiés.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-num">Étape 02</div>
+    <h3>Scraping et enrichissement des données</h3>
+    <p>L'agent utilise des sources publiques (LinkedIn, pages entreprises, offres d'emploi, presse) pour identifier des cibles correspondant au profil. Des outils comme Apollo.io ou Hunter.io permettent de récupérer les emails professionnels et d'enrichir les fiches avec des données contextuelles.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-num">Étape 03</div>
+    <h3>Rédaction d'emails personnalisés</h3>
+    <p>Pour chaque prospect, l'agent génère un email d'accroche personnalisé en s'appuyant sur des éléments spécifiques : poste récent, actualité de l'entreprise, problème probable lié à son secteur. L'objectif est que chaque email semble écrit à la main — parce que le contexte, lui, est vraiment unique.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-num">Étape 04</div>
+    <h3>Envoi séquencé et suivi</h3>
+    <p>L'agent envoie les emails selon un calendrier défini (J0, J+3, J+7, J+14) et adapte les relances selon les comportements observés : ouverture, clic, réponse. Un prospect qui a ouvert trois fois sans répondre reçoit une relance différente d'un prospect qui n'a jamais ouvert.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-num">Étape 05</div>
+    <h3>Qualification et transfert au commercial</h3>
+    <p>Dès qu'un prospect répond positivement, l'agent qualifie la demande, prépare un résumé du contexte et propose des créneaux de rendez-vous. Le commercial ne reçoit que des leads chauds, avec tout le contexte pour convertir.</p>
+  </div>
+
+  <h2>Les outils pour construire ce pipeline</h2>
+
+  <div class="tool-list">
+    <div class="tool">
+      <div class="tool-name">Apollo.io</div>
+      <div class="tool-desc">Base de données B2B + enrichissement email. Idéal pour la phase d'identification.</div>
+    </div>
+    <div class="tool">
+      <div class="tool-name">n8n</div>
+      <div class="tool-desc">Orchestrateur open-source. Connecte tous les outils sans code.</div>
+    </div>
+    <div class="tool">
+      <div class="tool-name">Instantly.ai</div>
+      <div class="tool-desc">Envoi d'emails séquencés à grande échelle avec suivi automatique.</div>
+    </div>
+    <div class="tool">
+      <div class="tool-name">Claude / GPT-4</div>
+      <div class="tool-desc">Rédaction des emails personnalisés à partir du contexte prospect.</div>
+    </div>
+  </div>
+
+  <h2>Ce que ça change concrètement</h2>
+
+  <p>Un commercial qui prospecte manuellement peut contacter 20 à 30 prospects par semaine de manière qualitative. Avec ce pipeline automatisé, le même commercial peut superviser 300 à 500 contacts simultanés — en passant son temps sur les conversations et les rendez-vous plutôt que sur la recherche et la rédaction.</p>
+
+  <blockquote>"L'agent ne remplace pas le commercial. Il lui donne 10x plus de surface de jeu."</blockquote>
+
+  <h2>Les limites à connaître</h2>
+
+  <p>L'automatisation de la prospection email est soumise à des règles strictes : consentement RGPD pour les particuliers, opt-out obligatoire, limites d'envoi pour éviter le spam. En B2B, la prospection par email reste légale sous conditions — mais un volume trop élevé depuis une seule adresse peut nuire à la délivrabilité. Commencez petit, mesurez, et montez en volume progressivement.</p>
+
+  <div class="cta-box">
+    <h3>Un agent concret chaque semaine</h3>
+    <p>Cas d'usage réels, outils testés, sans jargon technique.</p>
+    <a href="/newsletter" class="btn">Rejoindre la newsletter →</a>
+  </div>
+</article>
+<footer><p>© 2025 AgentsAutonomes.ai — Tous droits réservés</p></footer>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoGPT, CrewAI, n8n : quel agent IA choisir selon ton métier ? | AgentsAutonomes.ai</title>
+  <meta name="description" content="Comparatif AutoGPT vs CrewAI vs n8n : lequel choisir selon votre profil et votre métier ? Guide pratique pour choisir le bon framework d'agents IA." />
+  <link rel="canonical" href="https://agentsautonomes.ai/blog/autogpt-crewai-n8n-quel-agent-ia-choisir" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #0d0f12; --surface: #151820; --border: #1e2230; --accent: #00e5a0; --accent-dim: rgba(0,229,160,0.12); --text: #e8eaf0; --muted: #6b7080; --heading: #ffffff; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.75; }
+    header { border-bottom: 1px solid var(--border); padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--accent); text-decoration: none; }
+    .logo span { color: var(--heading); }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-left: 2rem; }
+    .hero { max-width: 760px; margin: 4rem auto 0; padding: 0 2rem; }
+    .tag { display: inline-block; background: var(--accent-dim); color: var(--accent); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 2px; margin-bottom: 1.5rem; }
+    h1 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; color: var(--heading); line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 1.25rem; }
+    .meta { color: var(--muted); font-size: 0.85rem; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+    article { max-width: 760px; margin: 0 auto; padding: 0 2rem 6rem; }
+    h2 { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--heading); margin: 3rem 0 1rem; }
+    h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--heading); margin: 2rem 0 0.75rem; }
+    p { margin-bottom: 1.25rem; }
+    .profile-card { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 1.75rem; margin: 1.5rem 0; display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; align-items: start; }
+    .profile-icon { font-size: 2rem; }
+    .profile-title { font-family: 'Syne', sans-serif; font-weight: 700; color: var(--heading); margin-bottom: 0.4rem; }
+    .profile-tool { color: var(--accent); font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .profile-desc { color: var(--text); font-size: 0.95rem; margin: 0; }
+    blockquote { border-left: 2px solid var(--accent); padding: 1rem 1.5rem; margin: 2rem 0; color: var(--muted); font-style: italic; }
+    .cta-box { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 2.5rem; text-align: center; margin: 4rem 0 2rem; }
+    .cta-box h3 { font-family: 'Syne', sans-serif; font-size: 1.4rem; color: var(--heading); margin: 0 0 0.75rem; }
+    .cta-box p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .btn { display: inline-block; background: var(--accent); color: #0d0f12; font-weight: 600; padding: 0.85rem 2rem; border-radius: 3px; text-decoration: none; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; color: var(--muted); font-size: 0.8rem; }
+    @media (max-width: 640px) { .profile-card { grid-template-columns: 1fr; } nav { display: none; } .hero, article { padding-left: 1.25rem; padding-right: 1.25rem; } }
+  </style>
+</head>
+<body>
+<header>
+  <a href="/" class="logo">agents<span>autonomes</span>.ai</a>
+  <nav><a href="/blog">Blog</a><a href="/newsletter">Newsletter</a></nav>
+</header>
+<div class="hero">
+  <div class="tag">Comparatif</div>
+  <h1>AutoGPT, CrewAI, n8n : quel agent IA choisir selon ton métier ?</h1>
+  <p class="meta">Août 2025 &nbsp;·&nbsp; 6 min de lecture</p>
+</div>
+<article>
+  <p>AutoGPT a créé le buzz en 2023, CrewAI s'est imposé en 2024, et n8n reste l'outil de référence pour les automatisations métier. En 2025, les trois coexistent — mais ils ne s'adressent pas du tout au même public. Voici comment choisir selon votre profil et vos objectifs.</p>
+
+  <h2>Les trois outils en une phrase</h2>
+  <p><strong>AutoGPT</strong> : un agent autonome généraliste qui tente de résoudre des missions ouvertes en naviguant sur le web et en exécutant du code. Impressionnant en démo, encore limité en production.</p>
+  <p><strong>CrewAI</strong> : un framework Python qui permet de faire collaborer plusieurs agents spécialisés sur une mission complexe. Puissant, mais demande des bases en programmation.</p>
+  <p><strong>n8n</strong> : un orchestrateur de workflows visuels avec des capacités IA intégrées. Moins "agent" au sens strict, mais le plus utilisable immédiatement en contexte professionnel.</p>
+
+  <h2>Selon votre profil</h2>
+
+  <div class="profile-card">
+    <div class="profile-icon">📊</div>
+    <div>
+      <div class="profile-title">Le manager ou dirigeant non-tech</div>
+      <div class="profile-tool">→ n8n ou Make</div>
+      <p class="profile-desc">Vous voulez automatiser des processus métier existants sans écrire de code. n8n avec son interface visuelle permet de construire des workflows puissants — envoi d'emails, traitement de données, alertes automatiques — sans compétences techniques.</p>
+    </div>
+  </div>
+
+  <div class="profile-card">
+    <div class="profile-icon">💼</div>
+    <div>
+      <div class="profile-title">Le consultant ou freelance</div>
+      <div class="profile-tool">→ Relevance AI ou n8n</div>
+      <p class="profile-desc">Vous voulez automatiser des livrables récurrents (rapports, analyses, veille) pour vos clients. Relevance AI permet de créer des agents métier clé en main, tandis que n8n offre plus de flexibilité pour des workflows sur mesure.</p>
+    </div>
+  </div>
+
+  <div class="profile-card">
+    <div class="profile-icon">🔬</div>
+    <div>
+      <div class="profile-title">Le développeur ou data scientist</div>
+      <div class="profile-tool">→ CrewAI ou LangGraph</div>
+      <p class="profile-desc">Vous voulez construire des systèmes multi-agents capables de collaborer sur des missions complexes. CrewAI offre une abstraction élégante pour orchestrer plusieurs agents spécialisés. LangGraph est plus bas niveau mais plus flexible.</p>
+    </div>
+  </div>
+
+  <div class="profile-card">
+    <div class="profile-icon">🚀</div>
+    <div>
+      <div class="profile-title">L'entrepreneur ou startuper</div>
+      <div class="profile-tool">→ n8n + API LLM</div>
+      <p class="profile-desc">Vous voulez aller vite, tester des hypothèses et itérer. n8n connecté aux APIs d'Anthropic ou OpenAI permet de prototyper un agent métier en quelques heures, sans infrastructure complexe.</p>
+    </div>
+  </div>
+
+  <h2>AutoGPT : pourquoi le buzz ne s'est pas concrétisé</h2>
+  <p>AutoGPT a été la première démonstration grand public d'un agent vraiment autonome. Le problème : les agents qui "font tout tout seuls" ont tendance à dériver sur des missions ouvertes, à accumuler des erreurs en chaîne, et à coûter cher en tokens API sans produire de résultats fiables. En 2025, AutoGPT est davantage un terrain d'expérimentation qu'un outil de production.</p>
+
+  <blockquote>"Le meilleur agent est celui que vous pouvez superviser et corriger facilement — pas celui qui fait le plus de choses sans vous."</blockquote>
+
+  <h2>La vraie question à se poser</h2>
+  <p>Avant de choisir un outil, posez-vous cette question : est-ce que la mission que je veux automatiser est suffisamment définie pour qu'un humain puisse l'exécuter de manière reproductible ? Si la réponse est non, aucun agent ne le fera correctement. Si la réponse est oui, vous avez votre base pour choisir l'outil le plus adapté à votre contexte.</p>
+
+  <div class="cta-box">
+    <h3>Un agent concret chaque semaine</h3>
+    <p>Cas d'usage réels, outils testés, sans jargon technique.</p>
+    <a href="/newsletter" class="btn">Rejoindre la newsletter →</a>
+  </div>
+</article>
+<footer><p>© 2025 AgentsAutonomes.ai — Tous droits réservés</p></footer>
+</body>
+</html>
