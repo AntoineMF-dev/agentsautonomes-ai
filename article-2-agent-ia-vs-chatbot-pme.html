@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agent IA vs chatbot : quelle différence concrète pour une PME ? | AgentsAutonomes.ai</title>
+  <meta name="description" content="Chatbot ou agent IA autonome ? On vous explique la différence réelle, ce que ça change pour une PME, et comment choisir le bon outil selon votre cas d'usage." />
+  <link rel="canonical" href="https://agentsautonomes.ai/blog/agent-ia-vs-chatbot-pme" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0d0f12; --surface: #151820; --border: #1e2230;
+      --accent: #00e5a0; --accent-dim: rgba(0,229,160,0.12);
+      --text: #e8eaf0; --muted: #6b7080; --heading: #ffffff;
+    }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.75; }
+    header { border-bottom: 1px solid var(--border); padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--accent); text-decoration: none; letter-spacing: -0.02em; }
+    .logo span { color: var(--heading); }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-left: 2rem; transition: color 0.2s; }
+    nav a:hover { color: var(--text); }
+    .hero { max-width: 760px; margin: 4rem auto 0; padding: 0 2rem; }
+    .tag { display: inline-block; background: var(--accent-dim); color: var(--accent); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 2px; margin-bottom: 1.5rem; }
+    h1 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; color: var(--heading); line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 1.25rem; }
+    .meta { color: var(--muted); font-size: 0.85rem; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+    article { max-width: 760px; margin: 0 auto; padding: 0 2rem 6rem; }
+    h2 { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--heading); margin: 3rem 0 1rem; letter-spacing: -0.02em; }
+    h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--heading); margin: 2rem 0 0.75rem; }
+    p { margin-bottom: 1.25rem; }
+    .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border-radius: 4px; overflow: hidden; margin: 2rem 0; }
+    .compare-col { background: var(--surface); padding: 1.5rem; }
+    .compare-col.accent-col { border-top: 3px solid var(--accent); }
+    .compare-col h3 { margin-top: 0; font-size: 1rem; }
+    .compare-col ul { list-style: none; padding: 0; }
+    .compare-col ul li { padding: 0.4rem 0; font-size: 0.9rem; color: var(--text); border-bottom: 1px solid var(--border); }
+    .compare-col ul li:last-child { border-bottom: none; }
+    .compare-col ul li::before { content: "→ "; color: var(--accent); }
+    .scenario { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 1.5rem; margin: 1.5rem 0; }
+    .scenario-label { font-size: 0.75rem; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+    blockquote { border-left: 2px solid var(--accent); padding: 1rem 1.5rem; margin: 2rem 0; color: var(--muted); font-style: italic; }
+    .cta-box { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 2.5rem; text-align: center; margin: 4rem 0 2rem; }
+    .cta-box h3 { font-size: 1.4rem; margin-top: 0; margin-bottom: 0.75rem; }
+    .cta-box p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .btn { display: inline-block; background: var(--accent); color: #0d0f12; font-weight: 600; font-size: 0.95rem; padding: 0.85rem 2rem; border-radius: 3px; text-decoration: none; transition: opacity 0.2s; }
+    .btn:hover { opacity: 0.85; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; color: var(--muted); font-size: 0.8rem; }
+    @media (max-width: 640px) { header { padding: 1rem; } nav { display: none; } .hero, article { padding-left: 1.25rem; padding-right: 1.25rem; } .compare-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="/" class="logo">agents<span>autonomes</span>.ai</a>
+  <nav>
+    <a href="/blog">Blog</a>
+    <a href="/newsletter">Newsletter</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="tag">Comparatif</div>
+  <h1>Agent IA vs chatbot : quelle différence concrète pour une PME ?</h1>
+  <p class="meta">Août 2025 &nbsp;·&nbsp; 6 min de lecture</p>
+</div>
+
+<article>
+
+  <p>On met souvent dans le même sac chatbot, assistant IA et agent autonome. C'est une erreur qui coûte cher — pas en argent, mais en attentes mal calibrées. Une PME qui déploie un chatbot en pensant avoir un agent va vite être déçue. Et inversement, une PME qui hésite à se lancer par peur de la complexité passe à côté d'outils qui fonctionnent déjà aujourd'hui.</p>
+
+  <p>Voici la distinction utile, sans jargon technique.</p>
+
+  <h2>La différence fondamentale</h2>
+
+  <p>Un <strong>chatbot</strong> répond. Il attend qu'on lui parle, produit une réponse, et s'arrête. Il peut être très sophistiqué — basé sur un LLM puissant, capable de comprendre des questions complexes — mais il reste fondamentalement <em>réactif</em>. C'est un interlocuteur, pas un exécutant.</p>
+
+  <p>Un <strong>agent IA autonome</strong> agit. On lui confie une mission — pas juste une question — et il la décompose en étapes, utilise des outils (recherche web, envoi d'emails, lecture de fichiers, appels à des APIs), vérifie ses propres résultats et boucle jusqu'à avoir atteint l'objectif. Il est <em>proactif</em>.</p>
+
+  <div class="compare-grid">
+    <div class="compare-col">
+      <h3>Chatbot classique</h3>
+      <ul>
+        <li>Répond à une question</li>
+        <li>Une interaction = une réponse</li>
+        <li>Pas d'accès aux outils externes</li>
+        <li>Pas de mémoire entre sessions</li>
+        <li>Ne peut pas initier d'action</li>
+        <li>Déploiement simple et rapide</li>
+      </ul>
+    </div>
+    <div class="compare-col accent-col">
+      <h3>Agent IA autonome</h3>
+      <ul>
+        <li>Exécute une mission complète</li>
+        <li>Une mission = plusieurs étapes</li>
+        <li>Accès à des outils et APIs</li>
+        <li>Peut avoir une mémoire persistante</li>
+        <li>Peut initier des actions sans prompt</li>
+        <li>Déploiement plus technique</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Trois scénarios PME concrets</h2>
+
+  <div class="scenario">
+    <div class="scenario-label">Scénario A — Support client</div>
+    <h3>Chatbot : répond aux questions fréquentes</h3>
+    <p>Un visiteur demande "quels sont vos délais de livraison ?" — le chatbot consulte sa base de connaissances et répond. Efficace, simple, peu coûteux à déployer.</p>
+    <h3>Agent : gère le ticket de bout en bout</h3>
+    <p>Un client signale une commande non reçue. L'agent consulte le système de gestion des commandes, identifie le problème (retard transporteur), envoie un email au client avec les infos à jour, crée un ticket de suivi et alerte le responsable logistique si le délai dépasse un seuil défini.</p>
+  </div>
+
+  <div class="scenario">
+    <div class="scenario-label">Scénario B — Prospection</div>
+    <h3>Chatbot : qualifie les leads entrants</h3>
+    <p>Un prospect remplit un formulaire sur votre site. Le chatbot pose quelques questions de qualification et transfère à un commercial si le profil correspond.</p>
+    <h3>Agent : génère et traite les leads sortants</h3>
+    <p>L'agent identifie des cibles selon vos critères (secteur, taille, poste du décideur), rédige des emails personnalisés pour chacune, les envoie selon un calendrier, suit les ouvertures et relance automatiquement selon les comportements observés.</p>
+  </div>
+
+  <div class="scenario">
+    <div class="scenario-label">Scénario C — Reporting financier</div>
+    <h3>Chatbot : répond à des questions sur vos données</h3>
+    <p>"Quel était notre CA en mars ?" — le chatbot interroge votre base et répond. Utile pour l'accès rapide à l'information.</p>
+    <h3>Agent : produit le rapport complet</h3>
+    <p>Chaque début de mois, l'agent récupère les données budgétaires et réelles, calcule les écarts, identifie les postes à expliquer, rédige les commentaires de gestion et produit un rapport mis en forme, prêt à présenter en CODIR.</p>
+  </div>
+
+  <h2>Lequel choisir pour votre PME ?</h2>
+
+  <p>La réponse tient en une question : <strong>est-ce que la tâche que vous voulez automatiser nécessite plusieurs étapes et l'accès à des systèmes externes ?</strong></p>
+
+  <p>Si oui → agent. Si non → chatbot suffit probablement.</p>
+
+  <blockquote>"Le chatbot est une porte d'entrée. L'agent est un collaborateur."</blockquote>
+
+  <p>Pour une première expérimentation en PME, le chatbot reste le point de départ naturel — plus simple à déployer, plus facile à contrôler, moins risqué en cas d'erreur. L'agent vient ensuite, sur des process bien documentés où le gain de temps justifie l'investissement de configuration.</p>
+
+  <h2>Le vrai critère de décision</h2>
+
+  <p>Combien de temps passe un membre de votre équipe sur cette tâche chaque semaine ? Si la réponse est supérieure à <strong>4 heures</strong>, et si la tâche est répétitive et documentable, un agent autonome va probablement dégager un ROI positif en moins de trois mois.</p>
+
+  <p>En dessous de ce seuil, un chatbot bien configuré — ou même un simple template de prompt réutilisable — est souvent suffisant et beaucoup plus rapide à mettre en place.</p>
+
+  <div class="cta-box">
+    <h3>Un outil par semaine, expliqué simplement</h3>
+    <p>Chaque semaine, un agent concret, un cas d'usage réel, un outil testé. Pour les pros qui veulent automatiser sans se noyer dans la technique.</p>
+    <a href="/newsletter" class="btn">Rejoindre la newsletter →</a>
+  </div>
+
+</article>
+
+<footer>
+  <p>© 2025 AgentsAutonomes.ai — Tous droits réservés</p>
+</footer>
+
+</body>
+</html>
