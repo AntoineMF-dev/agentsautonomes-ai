@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comment mesurer le ROI d'un agent IA autonome | AgentsAutonomes.ai</title>
+  <meta name="description" content="Méthode concrète pour calculer le retour sur investissement d'un agent IA en entreprise : indicateurs, baseline, calcul du gain réel." />
+  <link rel="canonical" href="https://agentsautonomes.ai/blog/mesurer-roi-agent-ia-autonome" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #0d0f12; --surface: #151820; --border: #1e2230; --accent: #00e5a0; --accent-dim: rgba(0,229,160,0.12); --text: #e8eaf0; --muted: #6b7080; --heading: #ffffff; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.75; }
+    header { border-bottom: 1px solid var(--border); padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--accent); text-decoration: none; }
+    .logo span { color: var(--heading); }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-left: 2rem; }
+    .hero { max-width: 760px; margin: 4rem auto 0; padding: 0 2rem; }
+    .tag { display: inline-block; background: var(--accent-dim); color: var(--accent); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 2px; margin-bottom: 1.5rem; }
+    h1 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; color: var(--heading); line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 1.25rem; }
+    .meta { color: var(--muted); font-size: 0.85rem; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+    article { max-width: 760px; margin: 0 auto; padding: 0 2rem 6rem; }
+    h2 { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--heading); margin: 3rem 0 1rem; }
+    h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--heading); margin: 2rem 0 0.75rem; }
+    p { margin-bottom: 1.25rem; }
+    .formula { background: var(--surface); border: 1px solid var(--accent); border-radius: 6px; padding: 2rem; margin: 2rem 0; text-align: center; }
+    .formula-text { font-family: 'Syne', sans-serif; font-size: 1.1rem; color: var(--accent); font-weight: 700; margin-bottom: 0.5rem; }
+    .formula-detail { font-size: 0.9rem; color: var(--muted); }
+    .metric { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 1.25rem; margin: 1rem 0; display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start; }
+    .metric-icon { font-size: 1.5rem; }
+    .metric h3 { margin: 0 0 0.4rem; font-size: 1rem; }
+    .metric p { margin: 0; font-size: 0.9rem; color: var(--muted); }
+    blockquote { border-left: 2px solid var(--accent); padding: 1rem 1.5rem; margin: 2rem 0; color: var(--muted); font-style: italic; }
+    .cta-box { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 2.5rem; text-align: center; margin: 4rem 0 2rem; }
+    .cta-box h3 { font-family: 'Syne', sans-serif; font-size: 1.4rem; color: var(--heading); margin: 0 0 0.75rem; }
+    .cta-box p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .btn { display: inline-block; background: var(--accent); color: #0d0f12; font-weight: 600; padding: 0.85rem 2rem; border-radius: 3px; text-decoration: none; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; color: var(--muted); font-size: 0.8rem; }
+    @media (max-width: 640px) { nav { display: none; } .hero, article { padding-left: 1.25rem; padding-right: 1.25rem; } .metric { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<header>
+  <a href="/" class="logo">agents<span>autonomes</span>.ai</a>
+  <nav><a href="/">Accueil</a><a href="/newsletter">Newsletter</a></nav>
+</header>
+<div class="hero">
+  <div class="tag">ROI & Performance</div>
+  <h1>Comment mesurer le ROI d'un agent IA autonome</h1>
+  <p class="meta">Août 2025 &nbsp;·&nbsp; 6 min de lecture</p>
+</div>
+<article>
+  <p>Investir dans un agent IA sans mesurer son impact, c'est comme conduire sans tableau de bord. Pourtant, la majorité des déploiements en PME ne définissent aucune métrique de succès avant de commencer. Résultat : impossible de savoir si l'outil tient ses promesses, impossible de le justifier en interne, impossible de l'améliorer. Voici une méthode simple pour mesurer concrètement ce que votre agent vous rapporte.</p>
+
+  <h2>La formule de base</h2>
+  <div class="formula">
+    <div class="formula-text">ROI = (Gain généré − Coût total) / Coût total × 100</div>
+    <div class="formula-detail">Où le gain = temps économisé × coût horaire + erreurs évitées + revenus supplémentaires générés</div>
+  </div>
+
+  <h2>Les 5 métriques à suivre</h2>
+
+  <div class="metric">
+    <div class="metric-icon">⏱</div>
+    <div>
+      <h3>Temps économisé par semaine</h3>
+      <p>Mesure le temps que la tâche prenait avant l'agent, et ce qu'il prend maintenant. La différence multipliée par le coût horaire de la personne concernée donne le gain financier direct.</p>
+    </div>
+  </div>
+
+  <div class="metric">
+    <div class="metric-icon">✅</div>
+    <div>
+      <h3>Taux de résolution autonome</h3>
+      <p>Pour un agent SAV ou support : pourcentage de tickets traités sans intervention humaine. Objectif cible : 55-70% sur les cas courants.</p>
+    </div>
+  </div>
+
+  <div class="metric">
+    <div class="metric-icon">⚡</div>
+    <div>
+      <h3>Délai de traitement moyen</h3>
+      <p>Temps entre la réception d'une demande et sa résolution. Un agent bien configuré réduit généralement ce délai de 60 à 80% sur les cas automatisables.</p>
+    </div>
+  </div>
+
+  <div class="metric">
+    <div class="metric-icon">❌</div>
+    <div>
+      <h3>Taux d'erreur</h3>
+      <p>Pourcentage de réponses incorrectes ou inappropriées produites par l'agent. À surveiller hebdomadairement, surtout en phase de démarrage.</p>
+    </div>
+  </div>
+
+  <div class="metric">
+    <div class="metric-icon">😊</div>
+    <div>
+      <h3>Satisfaction utilisateur</h3>
+      <p>Pour les agents en contact avec des clients ou des collaborateurs : score de satisfaction post-interaction. Un agent qui résout vite mais mal dégrade l'expérience globale.</p>
+    </div>
+  </div>
+
+  <h2>Comment établir la baseline</h2>
+  <p>Avant de déployer l'agent, mesurez pendant deux semaines le process actuel : combien de temps prend la tâche, quel est le volume traité, combien d'erreurs sont produites, quelle est la satisfaction des parties prenantes. Ces chiffres sont votre point de comparaison — sans eux, vous ne pouvez pas démontrer la valeur de l'automatisation.</p>
+
+  <blockquote>"Un agent IA sans métriques de succès est un pari. Un agent IA avec des métriques est un investissement."</blockquote>
+
+  <h2>Le calcul concret</h2>
+  <p>Exemple réel : une PME de 80 personnes déploie un agent de pré-qualification des candidatures RH. Avant : 4 heures par semaine passées par la RRH à trier les CV (coût : 50€/h = 200€/semaine). Après : 45 minutes de validation de la shortlist produite par l'agent. Gain hebdomadaire : 3h15 = 162€. Coût mensuel de l'outil : 50€. ROI mensuel : (648€ - 50€) / 50€ = +1096%.</p>
+
+  <div class="cta-box">
+    <h3>Un agent concret chaque semaine</h3>
+    <p>Cas d'usage réels, outils testés, sans jargon technique.</p>
+    <a href="/" class="btn">Rejoindre la newsletter →</a>
+  </div>
+</article>
+<footer><p>© 2025 AgentsAutonomes.ai — Tous droits réservés</p></footer>
+</body>
+</html>
