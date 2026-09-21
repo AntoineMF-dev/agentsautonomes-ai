@@ -2,31 +2,97 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://agentsautonomes.ai/</loc>
-    <lastmod>2025-08-16</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://agentsautonomes.ai/article-1-agents-ia-remplacent-salarie.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://agentsautonomes.ai/article-2-agent-ia-vs-chatbot-pme.html</loc>
-    <lastmod>2025-08-16</lastmod>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://agentsautonomes.ai/article-3-agent-ia-prospection-commerciale.html</loc>
-    <lastmod>2025-08-16</lastmod>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://agentsautonomes.ai/article-4-meilleurs-outils-agent-ia-sans-developpeur.html</loc>
-    <lastmod>2025-08-16</lastmod>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://agentsautonomes.ai/article-5-autogpt-crewai-n8n-quel-agent-choisir.html</loc>
-    <lastmod>2025-08-16</lastmod>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agentsautonomes.ai/batch2-article-1-agent-ia-sav.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agentsautonomes.ai/batch2-article-2-erreurs-agent-ia.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agentsautonomes.ai/batch2-article-3-agent-ia-rh-recrutement.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agentsautonomes.ai/batch2-article-4-roi-agent-ia.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agentsautonomes.ai/batch2-article-5-agents-ia-2025-bilan.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agentsautonomes.ai/batch3-article-1-agent-ia-comptabilite.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agentsautonomes.ai/batch3-article-2-agent-ia-veille-concurrentielle.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agentsautonomes.ai/batch3-article-3-agent-ia-pme-zero-budget.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agentsautonomes.ai/batch3-article-4-agents-ia-multimodaux.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agentsautonomes.ai/batch3-article-5-agent-ia-gestion-projet.html</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
