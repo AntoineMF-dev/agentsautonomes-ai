@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Les agents IA multimodaux : quand l'IA lit vos images et vos PDF | AgentsAutonomes.ai</title>
+  <meta name="description" content="Les agents IA multimodaux peuvent lire images, PDF et documents scannés. Ce que ça change concrètement pour les PME et les cas d'usage les plus utiles." />
+  <link rel="canonical" href="https://agentsautonomes.ai/batch3-article-4-agents-ia-multimodaux.html" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #0d0f12; --surface: #151820; --border: #1e2230; --accent: #00e5a0; --accent-dim: rgba(0,229,160,0.12); --text: #e8eaf0; --muted: #6b7080; --heading: #ffffff; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.75; }
+    header { border-bottom: 1px solid var(--border); padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--accent); text-decoration: none; }
+    .logo span { color: var(--heading); }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-left: 2rem; }
+    .hero { max-width: 760px; margin: 4rem auto 0; padding: 0 2rem; }
+    .tag { display: inline-block; background: var(--accent-dim); color: var(--accent); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 2px; margin-bottom: 1.5rem; }
+    h1 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; color: var(--heading); line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 1.25rem; }
+    .meta { color: var(--muted); font-size: 0.85rem; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+    article { max-width: 760px; margin: 0 auto; padding: 0 2rem 6rem; }
+    h2 { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--heading); margin: 3rem 0 1rem; }
+    h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--heading); margin: 2rem 0 0.75rem; }
+    p { margin-bottom: 1.25rem; }
+    .usecase { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 4px; padding: 1.5rem; margin: 1.5rem 0; }
+    .usecase h3 { margin: 0 0 0.5rem; font-size: 1rem; }
+    .usecase p { margin: 0; font-size: 0.95rem; }
+    blockquote { border-left: 2px solid var(--accent); padding: 1rem 1.5rem; margin: 2rem 0; color: var(--muted); font-style: italic; }
+    .cta-box { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 2.5rem; text-align: center; margin: 4rem 0 2rem; }
+    .cta-box h3 { font-family: 'Syne', sans-serif; font-size: 1.4rem; color: var(--heading); margin: 0 0 0.75rem; }
+    .cta-box p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .btn { display: inline-block; background: var(--accent); color: #0d0f12; font-weight: 600; padding: 0.85rem 2rem; border-radius: 3px; text-decoration: none; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; color: var(--muted); font-size: 0.8rem; }
+    @media (max-width: 640px) { nav { display: none; } .hero, article { padding-left: 1.25rem; padding-right: 1.25rem; } }
+  </style>
+</head>
+<body>
+<header>
+  <a href="/" class="logo">agents<span>autonomes</span>.ai</a>
+  <nav><a href="/">Accueil</a><a href="/newsletter">Newsletter</a></nav>
+</header>
+<div class="hero">
+  <div class="tag">Multimodal</div>
+  <h1>Les agents IA multimodaux : quand l'IA lit vos images et vos PDF</h1>
+  <p class="meta">Septembre 2025 &nbsp;·&nbsp; 6 min de lecture</p>
+</div>
+<article>
+  <p>Pendant longtemps, les agents IA ne traitaient que du texte. Les documents scannés, les photos de factures, les tableaux en image, les plans — tout ça restait hors de portée. Les modèles multimodaux ont changé la donne : ils lisent maintenant les images, les PDF, les graphiques, et même les captures d'écran avec une précision qui ouvre de nouveaux cas d'usage concrets.</p>
+
+  <h2>Ce que "multimodal" veut dire concrètement</h2>
+  <p>Un modèle multimodal peut recevoir en entrée du texte, des images, et des documents — et raisonner sur l'ensemble. Claude 3, GPT-4o, et Gemini Pro sont aujourd'hui les modèles les plus accessibles avec cette capacité. Ils peuvent lire une facture photographiée avec un smartphone et en extraire les données structurées, analyser un graphique et en commenter les tendances, ou comparer deux versions d'un document en identifiant les différences.</p>
+
+  <h2>Les cas d'usage les plus utiles en PME</h2>
+
+  <div class="usecase">
+    <h3>Traitement des factures scannées</h3>
+    <p>Une photo de facture prise avec un smartphone suffit. L'agent extrait fournisseur, montant, TVA, date, et référence — même sur des documents mal cadrés ou légèrement flous. Fini la saisie manuelle des factures papier.</p>
+  </div>
+
+  <div class="usecase">
+    <h3>Analyse de documents contractuels PDF</h3>
+    <p>Uploadez un contrat PDF de 40 pages. L'agent identifie les clauses clés, les dates importantes, les obligations de chaque partie, et les points d'attention — en moins de 30 secondes. Idéal pour une première lecture avant de passer au juriste.</p>
+  </div>
+
+  <div class="usecase">
+    <h3>Extraction de données depuis des tableaux en image</h3>
+    <p>Un rapport fourni en PDF image, un tableau photographié dans une présentation, un graphique extrait d'un rapport annuel — l'agent peut en extraire les données chiffrées et les convertir en format exploitable.</p>
+  </div>
+
+  <div class="usecase">
+    <h3>Analyse de captures d'écran</h3>
+    <p>Une capture d'un dashboard, d'un interface logicielle, d'une page web — l'agent peut décrire ce qu'il voit, identifier des anomalies, ou répondre à des questions sur le contenu de l'image. Utile pour les rapports de bug ou les analyses de concurrents.</p>
+  </div>
+
+  <h2>Les limites actuelles</h2>
+  <p>La précision diminue sur les documents très denses ou mal scannés. Les tableaux complexes avec des fusions de cellules sont parfois mal interprétés. Et les documents qui mélangent plusieurs langues ou des caractères spéciaux peuvent poser des problèmes. Ces limites s'améliorent rapidement — mais pour des documents critiques, une vérification humaine reste recommandée.</p>
+
+  <blockquote>"Le multimodal transforme n'importe quel document physique en donnée structurée exploitable. C'est la fin du 'on ne peut pas automatiser ça, c'est du papier'."</blockquote>
+
+  <div class="cta-box">
+    <h3>Un agent concret chaque semaine</h3>
+    <p>Cas d'usage réels, outils testés, sans jargon technique.</p>
+    <a href="/" class="btn">Rejoindre la newsletter →</a>
+  </div>
+</article>
+<footer><p>© 2025 AgentsAutonomes.ai — Tous droits réservés</p></footer>
+</body>
+</html>
