@@ -8,6 +8,20 @@
   <atom:link href="https://agentsautonomes.ai/feed.xml" rel="self" type="application/rss+xml" />
   <lastBuildDate>Sat, 10 Oct 2026 08:00:00 +0000</lastBuildDate>
   <item>
+    <title>Agent IA pour traiter les factures fournisseurs : architecture et garde-fous</title>
+    <link>https://agentsautonomes.ai/agent-ia-factures-fournisseurs</link>
+    <guid isPermaLink="true">https://agentsautonomes.ai/agent-ia-factures-fournisseurs</guid>
+    <pubDate>Sat, 10 Oct 2026 08:00:00 +0000</pubDate>
+    <description>Depuis septembre 2026, les factures fournisseurs arrivent en données structurées via une plateforme agréée. Architecture d&#x27;un agent IA qui les contrôle et prépare la saisie, avec les garde-fous anti-fraude.</description>
+  </item>
+  <item>
+    <title>AI Act : ce qu&#x27;une PME qui utilise un agent IA doit faire en 2026</title>
+    <link>https://agentsautonomes.ai/ai-act-pme-agent-ia-obligations-2026</link>
+    <guid isPermaLink="true">https://agentsautonomes.ai/ai-act-pme-agent-ia-obligations-2026</guid>
+    <pubDate>Sat, 10 Oct 2026 08:00:00 +0000</pubDate>
+    <description>Transparence depuis le 2 août 2026, maîtrise de l&#x27;IA depuis 2025, haut risque reporté à fin 2027 : ce que le règlement européen sur l&#x27;IA impose concrètement à une PME qui déploie un agent IA.</description>
+  </item>
+  <item>
     <title>Agent IA de relance des factures impayées : règles, séquence et garde-fous</title>
     <link>https://agentsautonomes.ai/agent-ia-relance-factures-impayees</link>
     <guid isPermaLink="true">https://agentsautonomes.ai/agent-ia-relance-factures-impayees</guid>
