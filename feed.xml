@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>AgentsAutonomes.ai</title>
+  <link>https://agentsautonomes.ai/</link>
+  <description>Les agents IA autonomes en pratique : cas d&#x27;usage, outils et garde-fous pour les PME.</description>
+  <language>fr-FR</language>
+  <atom:link href="https://agentsautonomes.ai/feed.xml" rel="self" type="application/rss+xml" />
+  <lastBuildDate>Sat, 10 Oct 2026 08:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Agent IA de relance des factures impayées : règles, séquence et garde-fous</title>
+    <link>https://agentsautonomes.ai/agent-ia-relance-factures-impayees</link>
+    <guid isPermaLink="true">https://agentsautonomes.ai/agent-ia-relance-factures-impayees</guid>
+    <pubDate>Sat, 10 Oct 2026 08:00:00 +0000</pubDate>
+    <description>Automatiser la relance des factures impayées avec un agent IA : règles de délais de paiement, séquence de relances, validation humaine et garde-fous.</description>
+  </item>
+  <item>
+    <title>Agent IA pour trier ses emails avec n8n : architecture, étapes et limites</title>
+    <link>https://agentsautonomes.ai/agent-ia-trier-emails-n8n</link>
+    <guid isPermaLink="true">https://agentsautonomes.ai/agent-ia-trier-emails-n8n</guid>
+    <pubDate>Sat, 10 Oct 2026 08:00:00 +0000</pubDate>
+    <description>Comment construire un agent IA de tri d&#x27;emails avec n8n : classification, étiquettes, brouillons validés par un humain, journal de contrôle et risques à connaître.</description>
+  </item>
+  <item>
+    <title>Agent IA et comptabilité : automatiser la saisie et les rapprochements</title>
+    <link>https://agentsautonomes.ai/agent-ia-comptabilite</link>
+    <guid isPermaLink="true">https://agentsautonomes.ai/agent-ia-comptabilite</guid>
+    <pubDate>Mon, 21 Sep 2026 08:00:00 +0000</pubDate>
+    <description>Comment un agent IA peut automatiser la saisie comptable et les rapprochements bancaires en PME : outils, limites, et ROI concret.</description>
+  </item>
+  <item>
+    <title>Agent IA et gestion de projet : automatiser le suivi sans perdre le contrôle</title>
+    <link>https://agentsautonomes.ai/agent-ia-gestion-projet</link>
+    <guid isPermaLink="true">https://agentsautonomes.ai/agent-ia-gestion-projet</guid>
+    <pubDate>Mon, 21 Sep 2026 08:00:00 +0000</pubDate>
+    <description>Comment utiliser un agent IA pour automatiser le suivi de projet : reporting, relances, détection de risques — sans déshumaniser le management.</description>
+  </item>
+  <item>
+    <title>Agent IA pour PME : par où commencer quand on a zéro budget</title>
+    <link>https://agentsautonomes.ai/agent-ia-pme-zero-budget</link>
+    <guid isPermaLink="true">https://agentsautonomes.ai/agent-ia-pme-zero-budget</guid>
+    <pubDate>Mon, 21 Sep 2026 08:00:00 +0000</pubDate>
+    <description>Comment déployer un premier agent IA utile sans budget : les outils gratuits, les cas d&#x27;usage accessibles, et la méthode pour ne pas se perdre.</description>
+  </item>
+  <item>
+    <title>Comment créer un agent IA de veille concurrentielle en 2026</title>
+    <link>https://agentsautonomes.ai/agent-ia-veille-concurrentielle</link>
+    <guid isPermaLink="true">https://agentsautonomes.ai/agent-ia-veille-concurrentielle</guid>
+    <pubDate>Mon, 21 Sep 2026 08:00:00 +0000</pubDate>
+    <description>Guide pratique pour automatiser sa veille concurrentielle avec un agent IA : sources, outils, fréquence, et format du livrable. Sans coder.</description>
+  </item>
+  <item>
+    <title>Les agents IA multimodaux : quand l&#x27;IA lit vos images et vos PDF</title>
+    <link>https://agentsautonomes.ai/agents-ia-multimodaux</link>
+    <guid isPermaLink="true">https://agentsautonomes.ai/agents-ia-multimodaux</guid>
+    <pubDate>Mon, 21 Sep 2026 08:00:00 +0000</pubDate>
+    <description>Les agents IA multimodaux peuvent lire images, PDF et documents scannés. Ce que ça change concrètement pour les PME et les cas d&#x27;usage les plus utiles.</description>
+  </item>
+  <item>
+    <title>Agent IA et RH : automatiser le recrutement sans déshumaniser</title>
+    <link>https://agentsautonomes.ai/agent-ia-rh-recrutement</link>
+    <guid isPermaLink="true">https://agentsautonomes.ai/agent-ia-rh-recrutement</guid>
+    <pubDate>Thu, 27 Aug 2026 08:00:00 +0000</pubDate>
+    <description>Comment utiliser un agent IA pour accélérer le recrutement en PME sans perdre la dimension humaine. Cas concrets, outils, limites éthiques.</description>
+  </item>
+  <item>
+    <title>Comment un agent IA peut gérer votre service après-vente automatiquement</title>
+    <link>https://agentsautonomes.ai/agent-ia-sav</link>
+    <guid isPermaLink="true">https://agentsautonomes.ai/agent-ia-sav</guid>
+    <pubDate>Thu, 27 Aug 2026 08:00:00 +0000</pubDate>
+    <description>Automatiser son SAV avec un agent IA : cas concrets, outils, limites et ROI. Guide pratique pour PME qui veulent réduire les délais de traitement sans recruter.</description>
+  </item>
+  <item>
+    <title>Les agents IA en 2025 : ce qui a vraiment changé en 12 mois</title>
+    <link>https://agentsautonomes.ai/agents-ia-bilan-2025</link>
+    <guid isPermaLink="true">https://agentsautonomes.ai/agents-ia-bilan-2025</guid>
+    <pubDate>Thu, 27 Aug 2026 08:00:00 +0000</pubDate>
+    <description>Bilan des évolutions majeures des agents IA autonomes entre 2024 et 2025 : nouvelles capacités, nouveaux usages, et ce qui reste encore à résoudre.</description>
+  </item>
+  <item>
+    <title>Les 5 erreurs à éviter quand on déploie un agent IA en entreprise</title>
+    <link>https://agentsautonomes.ai/erreurs-agent-ia</link>
+    <guid isPermaLink="true">https://agentsautonomes.ai/erreurs-agent-ia</guid>
+    <pubDate>Thu, 27 Aug 2026 08:00:00 +0000</pubDate>
+    <description>Déployer un agent IA sans tomber dans les pièges classiques : les 5 erreurs les plus fréquentes en entreprise et comment les éviter dès le départ.</description>
+  </item>
+  <item>
+    <title>Comment mesurer le ROI d&#x27;un agent IA autonome</title>
+    <link>https://agentsautonomes.ai/roi-agent-ia</link>
+    <guid isPermaLink="true">https://agentsautonomes.ai/roi-agent-ia</guid>
+    <pubDate>Thu, 27 Aug 2026 08:00:00 +0000</pubDate>
+    <description>Méthode concrète pour calculer le retour sur investissement d&#x27;un agent IA en entreprise : indicateurs, baseline, calcul du gain réel.</description>
+  </item>
+  <item>
+    <title>Comment créer un agent IA pour automatiser sa prospection commerciale</title>
+    <link>https://agentsautonomes.ai/agent-ia-prospection-commerciale</link>
+    <guid isPermaLink="true">https://agentsautonomes.ai/agent-ia-prospection-commerciale</guid>
+    <pubDate>Sat, 15 Aug 2026 08:00:00 +0000</pubDate>
+    <description>Tutoriel pratique pour automatiser sa prospection commerciale avec un agent IA : outils, étapes, exemples concrets. Sans coder.</description>
+  </item>
+  <item>
+    <title>Agent IA vs chatbot : quelle différence concrète pour une PME ?</title>
+    <link>https://agentsautonomes.ai/agent-ia-vs-chatbot-pme</link>
+    <guid isPermaLink="true">https://agentsautonomes.ai/agent-ia-vs-chatbot-pme</guid>
+    <pubDate>Sat, 15 Aug 2026 08:00:00 +0000</pubDate>
+    <description>Chatbot ou agent IA autonome ? On vous explique la différence réelle, ce que ça change pour une PME, et comment choisir le bon outil selon votre cas d&#x27;usage.</description>
+  </item>
+  <item>
+    <title>Les 5 agents IA autonomes qui remplacent déjà un salarié en 2026</title>
+    <link>https://agentsautonomes.ai/agents-ia-remplacent-salarie</link>
+    <guid isPermaLink="true">https://agentsautonomes.ai/agents-ia-remplacent-salarie</guid>
+    <pubDate>Sat, 15 Aug 2026 08:00:00 +0000</pubDate>
+    <description>5 agents IA autonomes qui automatisent déjà des tâches entières : prospection, support client, rédaction, analyse de données. Cas concrets et limites.</description>
+  </item>
+  <item>
+    <title>AutoGPT, CrewAI, n8n : quel agent IA choisir selon ton métier ?</title>
+    <link>https://agentsautonomes.ai/autogpt-crewai-n8n-quel-agent-choisir</link>
+    <guid isPermaLink="true">https://agentsautonomes.ai/autogpt-crewai-n8n-quel-agent-choisir</guid>
+    <pubDate>Sat, 15 Aug 2026 08:00:00 +0000</pubDate>
+    <description>Comparatif AutoGPT vs CrewAI vs n8n : lequel choisir selon votre profil et votre métier ? Guide pratique pour choisir le bon framework d&#x27;agents IA.</description>
+  </item>
+  <item>
+    <title>Les meilleurs outils pour déployer un agent IA sans développeur</title>
+    <link>https://agentsautonomes.ai/meilleurs-outils-agent-ia-sans-developpeur</link>
+    <guid isPermaLink="true">https://agentsautonomes.ai/meilleurs-outils-agent-ia-sans-developpeur</guid>
+    <pubDate>Sat, 15 Aug 2026 08:00:00 +0000</pubDate>
+    <description>Comparatif des meilleurs outils no-code pour déployer un agent IA autonome en entreprise : n8n, Make, Zapier, Relevance AI. Avantages, limites, cas d&#x27;usage.</description>
+  </item>
+</channel>
+</rss>
