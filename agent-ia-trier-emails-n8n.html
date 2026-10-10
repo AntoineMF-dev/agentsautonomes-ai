@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agent IA pour trier ses emails avec n8n : mode d'emploi</title>
+  <meta name="description" content="Comment construire un agent IA de tri d&#x27;emails avec n8n : classification, étiquettes, brouillons validés par un humain, journal de contrôle et risques à connaître." />
+  <link rel="canonical" href="https://agentsautonomes.ai/agent-ia-trier-emails-n8n.html" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #0d0f12; --surface: #151820; --border: #1e2230; --accent: #00e5a0; --accent-dim: rgba(0,229,160,0.12); --text: #e8eaf0; --muted: #6b7080; --heading: #ffffff; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.75; }
+    header { border-bottom: 1px solid var(--border); padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--accent); text-decoration: none; }
+    .logo span { color: var(--heading); }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-left: 2rem; }
+    .hero { max-width: 760px; margin: 4rem auto 0; padding: 0 2rem; }
+    .tag { display: inline-block; background: var(--accent-dim); color: var(--accent); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 2px; margin-bottom: 1.5rem; }
+    h1 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; color: var(--heading); line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 1.25rem; }
+    .meta { color: var(--muted); font-size: 0.85rem; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+    article { max-width: 760px; margin: 0 auto; padding: 0 2rem 6rem; }
+    h2 { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--heading); margin: 3rem 0 1rem; }
+    h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--heading); margin: 2rem 0 0.75rem; }
+    p { margin-bottom: 1.25rem; }
+    .tool { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 1.5rem; margin: 1.5rem 0; display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: start; }
+    .tool-info h3 { margin: 0 0 0.4rem; font-size: 1rem; }
+    .tool-info p { margin: 0; font-size: 0.9rem; color: var(--muted); }
+    .tool-price { font-family: 'Syne', sans-serif; font-weight: 700; color: var(--accent); font-size: 0.9rem; white-space: nowrap; }
+    blockquote { border-left: 2px solid var(--accent); padding: 1rem 1.5rem; margin: 2rem 0; color: var(--muted); font-style: italic; }
+    .cta-box { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 2.5rem; text-align: center; margin: 4rem 0 2rem; }
+    .cta-box h3 { font-family: 'Syne', sans-serif; font-size: 1.4rem; color: var(--heading); margin: 0 0 0.75rem; }
+    .cta-box p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .btn { display: inline-block; background: var(--accent); color: #0d0f12; font-weight: 600; padding: 0.85rem 2rem; border-radius: 3px; text-decoration: none; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; color: var(--muted); font-size: 0.8rem; }
+    @media (max-width: 640px) { .tool { grid-template-columns: 1fr; } nav { display: none; } .hero, article { padding-left: 1.25rem; padding-right: 1.25rem; } }
+  </style>
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="AgentsAutonomes.ai" />
+  <meta property="og:title" content="Agent IA pour trier ses emails avec n8n : architecture, étapes et limites" />
+  <meta property="og:description" content="Comment construire un agent IA de tri d&#x27;emails avec n8n : classification, étiquettes, brouillons validés par un humain, journal de contrôle et risques à connaître." />
+  <meta property="og:url" content="https://agentsautonomes.ai/agent-ia-trier-emails-n8n.html" />
+  <meta property="article:published_time" content="2026-10-10" />
+  <meta property="article:modified_time" content="2026-10-10" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Agent IA pour trier ses emails avec n8n : architecture, étapes et limites" />
+  <meta name="twitter:description" content="Comment construire un agent IA de tri d&#x27;emails avec n8n : classification, étiquettes, brouillons validés par un humain, journal de contrôle et risques à connaître." />
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Agent IA pour trier ses emails avec n8n : architecture, étapes et limites", "description": "Comment construire un agent IA de tri d'emails avec n8n : classification, étiquettes, brouillons validés par un humain, journal de contrôle et risques à connaître.", "inLanguage": "fr-FR", "mainEntityOfPage": "https://agentsautonomes.ai/agent-ia-trier-emails-n8n.html", "datePublished": "2026-10-10", "dateModified": "2026-10-10", "author": {"@type": "Organization", "name": "AgentsAutonomes.ai", "url": "https://agentsautonomes.ai/"}, "publisher": {"@type": "Organization", "name": "AgentsAutonomes.ai", "url": "https://agentsautonomes.ai/"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://agentsautonomes.ai/"}, {"@type": "ListItem", "position": 2, "name": "Agent IA pour trier ses emails avec n8n : architecture, étapes et limites", "item": "https://agentsautonomes.ai/agent-ia-trier-emails-n8n.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Faut-il savoir programmer pour créer cet agent ?", "acceptedAnswer": {"@type": "Answer", "text": "Non pour les nœuds standard : n8n est visuel. Un peu de logique de workflow et la rédaction de prompts clairs suffisent pour un premier agent de tri."}}, {"@type": "Question", "name": "L'agent peut-il répondre seul aux emails ?", "acceptedAnswer": {"@type": "Answer", "text": "Techniquement oui, mais ce n'est pas recommandé au départ. Commencez par des brouillons validés par un humain."}}, {"@type": "Question", "name": "Comment savoir si l'agent se trompe ?", "acceptedAnswer": {"@type": "Answer", "text": "Gardez un journal de ses décisions et comparez-le chaque semaine à un échantillon trié à la main."}}]}]</script>
+  <style id="seo-extra">
+.related{margin:3rem 0 2rem;padding-top:2rem;border-top:1px solid var(--border,#ddd)}
+.related h2{margin-top:0}
+.related ul{list-style:none;padding:0;margin:0;display:grid;gap:.75rem}
+.related a{display:block;padding:1rem 1.25rem;background:var(--surface,#fff);border:1px solid var(--border,#ddd);border-radius:4px;color:var(--accent,#1a3a5c);text-decoration:none;font-weight:600}
+.related a:hover{border-color:var(--accent,#1a3a5c)}
+</style>
+</head>
+<body>
+<header>
+  <a href="/" class="logo">agents<span>autonomes</span>.ai</a>
+  <nav><a href="/">Accueil</a><a href="/#newsletter">Newsletter</a></nav>
+</header>
+<div class="hero">
+  <div class="tag">Tutoriel</div>
+  <h1>Agent IA pour trier ses emails avec n8n : architecture, étapes et limites</h1>
+  <p class="meta">Octobre 2026 &nbsp;·&nbsp; 8 min de lecture</p>
+</div>
+<article>
+
+  <p>Trier ses emails est une tâche idéale pour un agent IA : volume élevé, règles claires, erreur peu coûteuse tant qu'un humain valide les réponses. Voici l'architecture d'un agent de tri construit avec n8n, l'outil d'automatisation que vous pouvez auto-héberger, et ses limites.</p>
+  <p><strong>Transparence :</strong> cet article décrit une architecture et des bonnes pratiques ; je n'annonce aucun chiffre de gain de temps ou de coût, car ils dépendent de votre volume d'emails et du modèle de langage choisi. Mesurez-les sur un échantillon avant de généraliser.</p>
+
+  <h2>Le principe : classer, étiqueter, préparer, puis laisser l'humain décider</h2>
+  <p>L'agent ne doit pas envoyer d'emails seul au départ. Il lit chaque nouveau message, le classe dans une catégorie, applique une étiquette et, pour certaines catégories, prépare un brouillon de réponse que vous relisez.</p>
+  <ul style="margin:0 0 1.25rem 1.25rem"><li style="margin-bottom:.5rem"><strong>Déclencheur :</strong> un nœud Gmail Trigger (ou IMAP pour une autre messagerie) lance le workflow à chaque nouveau message.</li><li style="margin-bottom:.5rem"><strong>Classification :</strong> un nœud de classification de texte envoie l'objet et le corps du message à un modèle de langage, avec vos catégories (client, facture, prospect, newsletter, à ignorer).</li><li style="margin-bottom:.5rem"><strong>Action :</strong> un nœud Gmail ajoute l'étiquette correspondante et archive les messages à faible valeur.</li><li style="margin-bottom:.5rem"><strong>Brouillon :</strong> pour les catégories client et prospect, un agent IA rédige une réponse enregistrée comme brouillon, jamais envoyée automatiquement.</li><li style="margin-bottom:.5rem"><strong>Journal :</strong> chaque décision est écrite dans un tableur (date, expéditeur, catégorie, action) pour contrôler les erreurs.</li></ul>
+
+
+  <h2>Mise en place pas à pas</h2>
+  <ol style="margin:0 0 1.25rem 1.25rem"><li style="margin-bottom:.5rem">Écrivez 5 à 8 catégories avec une définition d'une phrase et deux exemples chacune. C'est le prompt qui fait la qualité du tri.</li><li style="margin-bottom:.5rem">Créez les étiquettes correspondantes dans votre messagerie.</li><li style="margin-bottom:.5rem">Construisez le workflow : déclencheur, classification, étiquette, journal. Testez-le sur 50 à 100 emails déjà reçus avant de l'activer.</li><li style="margin-bottom:.5rem">Comparez le tri de l'agent à votre tri manuel et corrigez les définitions de catégories qui prêtent à confusion.</li><li style="margin-bottom:.5rem">Ajoutez les brouillons de réponse pour une seule catégorie, puis étendez progressivement.</li></ol>
+
+
+  <h2>Limites et risques à connaître</h2>
+  <ul style="margin:0 0 1.25rem 1.25rem"><li style="margin-bottom:.5rem"><strong>Données personnelles :</strong> vos emails contiennent des données de tiers. Si vous les envoyez à un modèle hébergé par un fournisseur, vérifiez ses conditions de traitement et informez-en les personnes concernées si nécessaire. Voir notre <a href="/batch2-article-2-erreurs-agent-ia.html" style="color:var(--accent)">article sur les erreurs à éviter</a>.</li><li style="margin-bottom:.5rem"><strong>Erreurs de classement :</strong> un message client classé en newsletter peut passer inaperçu. Gardez la boîte de réception visible pour les messages incertains et suivez le journal.</li><li style="margin-bottom:.5rem"><strong>Dérive :</strong> vos catégories évoluent ; relisez le journal chaque mois et mettez à jour les définitions.</li><li style="margin-bottom:.5rem"><strong>Coût :</strong> chaque email appelle un modèle de langage. Calculez le coût moyen sur votre échantillon de test avant d'activer l'agent.</li></ul>
+
+
+  <h2>Quels outils pour quel profil ?</h2>
+  <p>n8n convient si vous êtes à l'aise avec un outil visuel et acceptez de l'héberger ; si vous préférez une solution clés en main, comparez-la avec les autres dans notre <a href="/article-4-meilleurs-outils-agent-ia-sans-developpeur.html" style="color:var(--accent)">guide des outils pour déployer un agent IA sans développeur</a> et notre <a href="/article-5-autogpt-crewai-n8n-quel-agent-choisir.html" style="color:var(--accent)">comparatif AutoGPT, CrewAI et n8n</a>.</p>
+
+  <h2>Questions fréquentes</h2>
+  <h3>Faut-il savoir programmer pour créer cet agent ?</h3>
+  <p>Non pour les nœuds standard : n8n est visuel. Un peu de logique de workflow et la rédaction de prompts clairs suffisent pour un premier agent de tri.</p>
+  <h3>L'agent peut-il répondre seul aux emails ?</h3>
+  <p>Techniquement oui, mais ce n'est pas recommandé au départ. Commencez par des brouillons validés par un humain.</p>
+  <h3>Comment savoir si l'agent se trompe ?</h3>
+  <p>Gardez un journal de ses décisions et comparez-le chaque semaine à un échantillon trié à la main.</p>
+
+  <div class="cta-box">
+    <h3>Un agent concret chaque semaine</h3>
+    <p>Cas d'usage réels, outils testés, sans jargon technique.</p>
+    <a href="/" class="btn">Rejoindre la newsletter →</a>
+  </div>
+
+  <section class="related" aria-label="À lire aussi"><h2>À lire aussi</h2><ul><li><a href="/article-5-autogpt-crewai-n8n-quel-agent-choisir.html">AutoGPT, CrewAI, n8n : quel agent IA choisir selon ton métier ?</a></li><li><a href="/article-4-meilleurs-outils-agent-ia-sans-developpeur.html">Les meilleurs outils pour déployer un agent IA sans développeur</a></li><li><a href="/batch2-article-2-erreurs-agent-ia.html">Les 5 erreurs à éviter quand on déploie un agent IA en entreprise</a></li></ul></section>
+
+</article>
+<footer><p>© 2026 AgentsAutonomes.ai — Tous droits réservés</p></footer>
+</body>
+</html>

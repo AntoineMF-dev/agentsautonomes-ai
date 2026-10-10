@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agent IA de relance des factures impayées en PME</title>
+  <meta name="description" content="Automatiser la relance des factures impayées avec un agent IA : règles de délais de paiement, séquence de relances, validation humaine et garde-fous." />
+  <link rel="canonical" href="https://agentsautonomes.ai/agent-ia-relance-factures-impayees.html" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #0d0f12; --surface: #151820; --border: #1e2230; --accent: #00e5a0; --accent-dim: rgba(0,229,160,0.12); --text: #e8eaf0; --muted: #6b7080; --heading: #ffffff; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.75; }
+    header { border-bottom: 1px solid var(--border); padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--accent); text-decoration: none; }
+    .logo span { color: var(--heading); }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-left: 2rem; }
+    .hero { max-width: 760px; margin: 4rem auto 0; padding: 0 2rem; }
+    .tag { display: inline-block; background: var(--accent-dim); color: var(--accent); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 2px; margin-bottom: 1.5rem; }
+    h1 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; color: var(--heading); line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 1.25rem; }
+    .meta { color: var(--muted); font-size: 0.85rem; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+    article { max-width: 760px; margin: 0 auto; padding: 0 2rem 6rem; }
+    h2 { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--heading); margin: 3rem 0 1rem; }
+    h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--heading); margin: 2rem 0 0.75rem; }
+    p { margin-bottom: 1.25rem; }
+    .tool { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 1.5rem; margin: 1.5rem 0; display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: start; }
+    .tool-info h3 { margin: 0 0 0.4rem; font-size: 1rem; }
+    .tool-info p { margin: 0; font-size: 0.9rem; color: var(--muted); }
+    .tool-price { font-family: 'Syne', sans-serif; font-weight: 700; color: var(--accent); font-size: 0.9rem; white-space: nowrap; }
+    blockquote { border-left: 2px solid var(--accent); padding: 1rem 1.5rem; margin: 2rem 0; color: var(--muted); font-style: italic; }
+    .cta-box { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 2.5rem; text-align: center; margin: 4rem 0 2rem; }
+    .cta-box h3 { font-family: 'Syne', sans-serif; font-size: 1.4rem; color: var(--heading); margin: 0 0 0.75rem; }
+    .cta-box p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .btn { display: inline-block; background: var(--accent); color: #0d0f12; font-weight: 600; padding: 0.85rem 2rem; border-radius: 3px; text-decoration: none; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; color: var(--muted); font-size: 0.8rem; }
+    @media (max-width: 640px) { .tool { grid-template-columns: 1fr; } nav { display: none; } .hero, article { padding-left: 1.25rem; padding-right: 1.25rem; } }
+  </style>
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="AgentsAutonomes.ai" />
+  <meta property="og:title" content="Agent IA de relance des factures impayées : règles, séquence et garde-fous" />
+  <meta property="og:description" content="Automatiser la relance des factures impayées avec un agent IA : règles de délais de paiement, séquence de relances, validation humaine et garde-fous." />
+  <meta property="og:url" content="https://agentsautonomes.ai/agent-ia-relance-factures-impayees.html" />
+  <meta property="article:published_time" content="2026-10-10" />
+  <meta property="article:modified_time" content="2026-10-10" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Agent IA de relance des factures impayées : règles, séquence et garde-fous" />
+  <meta name="twitter:description" content="Automatiser la relance des factures impayées avec un agent IA : règles de délais de paiement, séquence de relances, validation humaine et garde-fous." />
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Agent IA de relance des factures impayées : règles, séquence et garde-fous", "description": "Automatiser la relance des factures impayées avec un agent IA : règles de délais de paiement, séquence de relances, validation humaine et garde-fous.", "inLanguage": "fr-FR", "mainEntityOfPage": "https://agentsautonomes.ai/agent-ia-relance-factures-impayees.html", "datePublished": "2026-10-10", "dateModified": "2026-10-10", "author": {"@type": "Organization", "name": "AgentsAutonomes.ai", "url": "https://agentsautonomes.ai/"}, "publisher": {"@type": "Organization", "name": "AgentsAutonomes.ai", "url": "https://agentsautonomes.ai/"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://agentsautonomes.ai/"}, {"@type": "ListItem", "position": 2, "name": "Agent IA de relance des factures impayées : règles, séquence et garde-fous", "item": "https://agentsautonomes.ai/agent-ia-relance-factures-impayees.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Un agent IA peut-il envoyer seul les relances ?", "acceptedAnswer": {"@type": "Answer", "text": "C'est possible techniquement, mais il vaut mieux garder une validation humaine, surtout dès la deuxième relance et pour tout courrier mentionnant des pénalités."}}, {"@type": "Question", "name": "Quelle indemnité réclamer pour une facture impayée ?", "acceptedAnswer": {"@type": "Answer", "text": "La fiche DGCCRF indique 40 euros par facture (article D. 441-5), à mentionner dans les CGV et sur les factures."}}, {"@type": "Question", "name": "Quel délai de paiement peut-on imposer à un client professionnel ?", "acceptedAnswer": {"@type": "Answer", "text": "Au maximum 60 jours nets après l'émission de la facture, ou 45 jours fin de mois sous conditions, selon la fiche DGCCRF."}}]}]</script>
+  <style id="seo-extra">
+.related{margin:3rem 0 2rem;padding-top:2rem;border-top:1px solid var(--border,#ddd)}
+.related h2{margin-top:0}
+.related ul{list-style:none;padding:0;margin:0;display:grid;gap:.75rem}
+.related a{display:block;padding:1rem 1.25rem;background:var(--surface,#fff);border:1px solid var(--border,#ddd);border-radius:4px;color:var(--accent,#1a3a5c);text-decoration:none;font-weight:600}
+.related a:hover{border-color:var(--accent,#1a3a5c)}
+</style>
+</head>
+<body>
+<header>
+  <a href="/" class="logo">agents<span>autonomes</span>.ai</a>
+  <nav><a href="/">Accueil</a><a href="/#newsletter">Newsletter</a></nav>
+</header>
+<div class="hero">
+  <div class="tag">Finance</div>
+  <h1>Agent IA de relance des factures impayées : règles, séquence et garde-fous</h1>
+  <p class="meta">Octobre 2026 &nbsp;·&nbsp; 7 min de lecture</p>
+</div>
+<article>
+
+  <p>Les factures impayées pèsent sur la trésorerie des PME, et la relance est une tâche répétitive que personne n'aime faire : un bon candidat pour un agent IA. L'agent prépare les relances au bon moment, avec le bon ton, et un humain valide les courriers sensibles.</p>
+  <p><strong>Avertissement :</strong> les règles légales ci-dessous viennent de la <a href="https://www.economie.gouv.fr/dgccrf/les-fiches-pratiques/delais-de-paiement-les-regles-connaitre" style="color:var(--accent)">fiche DGCCRF sur les délais de paiement</a> ; vérifiez-les pour votre situation. Aucun gain chiffré n'est annoncé : mesurez-le sur vos propres factures.</p>
+
+  <h2>Ce que dit la loi entre professionnels</h2>
+  <ul style="margin:0 0 1.25rem 1.25rem"><li style="margin-bottom:.5rem"><strong>Délai par défaut :</strong> 30 jours après réception des marchandises ou exécution de la prestation, sauf délai convenu.</li><li style="margin-bottom:.5rem"><strong>Délai maximal convenu :</strong> 60 jours nets après la date d'émission de la facture, ou 45 jours fin de mois si le contrat le prévoit et qu'il n'est pas abusif.</li><li style="margin-bottom:.5rem"><strong>Pénalités de retard :</strong> exigibles sans rappel. Le taux fixé au contrat ne peut pas être inférieur à trois fois le taux d'intérêt légal.</li><li style="margin-bottom:.5rem"><strong>Indemnité forfaitaire de recouvrement :</strong> 40 euros par facture impayée (article D. 441-5 du Code de commerce). Son principe et son montant doivent figurer dans les CGV et sur les factures.</li></ul>
+  <p>Ces règles servent de base à votre échéancier : l'agent n'a besoin que de la date d'échéance et du statut de paiement.</p>
+
+
+  <h2>L'architecture de l'agent</h2>
+  <ul style="margin:0 0 1.25rem 1.25rem"><li style="margin-bottom:.5rem"><strong>Source de données :</strong> un tableur ou votre logiciel de facturation avec : numéro de facture, client, montant, date d'échéance, statut, contact.</li><li style="margin-bottom:.5rem"><strong>Déclencheur :</strong> un déclenchement quotidien, par exemple avec n8n, qui lit les factures dont l'échéance est dépassée.</li><li style="margin-bottom:.5rem"><strong>Règles de séquence :</strong> relance courtoise peu après l'échéance, relance ferme plus tard, puis alerte humaine pour mise en demeure ; les délais exacts sont à fixer avec votre comptable.</li><li style="margin-bottom:.5rem"><strong>Rédaction :</strong> un modèle de langage personnalise le courrier à partir de modèles que vous avez validés (nom, montant, date, référence).</li><li style="margin-bottom:.5rem"><strong>Validation :</strong> les courriers sont enregistrés en brouillon ; une personne les relit avant l'envoi, surtout à partir de la deuxième relance.</li></ul>
+
+
+  <h2>Un exemple de séquence</h2>
+  <div style="overflow-x:auto;margin:1.5rem 0"><table style="border-collapse:collapse;width:100%;font-size:.95rem"><tr><th style="text-align:left;padding:.5rem;border-bottom:1px solid var(--border)">Étape</th><th style="text-align:left;padding:.5rem;border-bottom:1px solid var(--border)">Ton</th><th style="text-align:left;padding:.5rem;border-bottom:1px solid var(--border)">Action de l'agent</th><th style="text-align:left;padding:.5rem;border-bottom:1px solid var(--border)">Validation humaine</th></tr><tr><td style="padding:.5rem;border-bottom:1px solid var(--border);vertical-align:top">Après l'échéance</td><td style="padding:.5rem;border-bottom:1px solid var(--border);vertical-align:top">Courtois, rappel factuel</td><td style="padding:.5rem;border-bottom:1px solid var(--border);vertical-align:top">Prépare un brouillon avec facture jointe</td><td style="padding:.5rem;border-bottom:1px solid var(--border);vertical-align:top">Recommandée au début, puis allégée</td></tr><tr><td style="padding:.5rem;border-bottom:1px solid var(--border);vertical-align:top">Relance suivante</td><td style="padding:.5rem;border-bottom:1px solid var(--border);vertical-align:top">Ferme, rappel des pénalités et de l'indemnité de 40 euros si prévues dans vos CGV</td><td style="padding:.5rem;border-bottom:1px solid var(--border);vertical-align:top">Prépare un brouillon et alerte le responsable</td><td style="padding:.5rem;border-bottom:1px solid var(--border);vertical-align:top">Obligatoire</td></tr><tr><td style="padding:.5rem;border-bottom:1px solid var(--border);vertical-align:top">Retard persistant</td><td style="padding:.5rem;border-bottom:1px solid var(--border);vertical-align:top">Mise en demeure</td><td style="padding:.5rem;border-bottom:1px solid var(--border);vertical-align:top">Aucune rédaction automatique : alerte uniquement</td><td style="padding:.5rem;border-bottom:1px solid var(--border);vertical-align:top">Humain ou conseil juridique</td></tr></table></div>
+
+
+  <h2>Garde-fous</h2>
+  <ul style="margin:0 0 1.25rem 1.25rem"><li style="margin-bottom:.5rem">Ne relancez jamais un client dont le paiement est en cours de contestation : ajoutez un statut "litige" qui exclut la facture de la séquence.</li><li style="margin-bottom:.5rem">Vérifiez que vos CGV mentionnent les pénalités et l'indemnité de 40 euros, sinon l'agent ne doit pas les citer.</li><li style="margin-bottom:.5rem">Conservez la trace de chaque relance (date, contenu, destinataire) : elle sert de preuve.</li><li style="margin-bottom:.5rem">Mesurez sur un trimestre le délai moyen de paiement avant et après, avec vos propres données, avant de conclure à un gain.</li></ul>
+  <p>Pour calculer si l'investissement vaut le coup, lisez <a href="/batch2-article-4-roi-agent-ia.html" style="color:var(--accent)">comment mesurer le ROI d'un agent IA</a> et notre article sur <a href="/batch3-article-1-agent-ia-comptabilite.html" style="color:var(--accent)">les agents IA en comptabilité</a>.</p>
+
+  <h2>Questions fréquentes</h2>
+  <h3>Un agent IA peut-il envoyer seul les relances ?</h3>
+  <p>C'est possible techniquement, mais il vaut mieux garder une validation humaine, surtout dès la deuxième relance et pour tout courrier mentionnant des pénalités.</p>
+  <h3>Quelle indemnité réclamer pour une facture impayée ?</h3>
+  <p>La fiche DGCCRF indique 40 euros par facture (article D. 441-5), à mentionner dans les CGV et sur les factures.</p>
+  <h3>Quel délai de paiement peut-on imposer à un client professionnel ?</h3>
+  <p>Au maximum 60 jours nets après l'émission de la facture, ou 45 jours fin de mois sous conditions, selon la fiche DGCCRF.</p>
+
+  <div class="cta-box">
+    <h3>Un agent concret chaque semaine</h3>
+    <p>Cas d'usage réels, outils testés, sans jargon technique.</p>
+    <a href="/" class="btn">Rejoindre la newsletter →</a>
+  </div>
+
+  <section class="related" aria-label="À lire aussi"><h2>À lire aussi</h2><ul><li><a href="/batch3-article-1-agent-ia-comptabilite.html">Agent IA et comptabilité : automatiser la saisie et les rapprochements</a></li><li><a href="/batch2-article-4-roi-agent-ia.html">Comment mesurer le ROI d'un agent IA autonome</a></li><li><a href="/batch2-article-2-erreurs-agent-ia.html">Les 5 erreurs à éviter quand on déploie un agent IA en entreprise</a></li></ul></section>
+
+</article>
+<footer><p>© 2026 AgentsAutonomes.ai — Tous droits réservés</p></footer>
+</body>
+</html>
