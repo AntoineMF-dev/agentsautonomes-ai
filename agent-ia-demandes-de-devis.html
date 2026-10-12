@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agent IA pour traiter les demandes de devis : qualifier, préparer, relancer</title>
+  <meta name="description" content="Architecture d&#x27;un agent IA qui lit les demandes de devis entrantes, les qualifie, prépare un projet de devis à partir de votre grille tarifaire et relance au bon moment, avec un humain qui valide chaque envoi." />
+  <link rel="canonical" href="https://agentsautonomes.ai/agent-ia-demandes-de-devis" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #0d0f12; --surface: #151820; --border: #1e2230; --accent: #00e5a0; --accent-dim: rgba(0,229,160,0.12); --text: #e8eaf0; --muted: #6b7080; --heading: #ffffff; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.75; }
+    header { border-bottom: 1px solid var(--border); padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--accent); text-decoration: none; }
+    .logo span { color: var(--heading); }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-left: 2rem; }
+    .hero { max-width: 760px; margin: 4rem auto 0; padding: 0 2rem; }
+    .tag { display: inline-block; background: var(--accent-dim); color: var(--accent); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 2px; margin-bottom: 1.5rem; }
+    h1 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; color: var(--heading); line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 1.25rem; }
+    .meta { color: var(--muted); font-size: 0.85rem; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+    article { max-width: 760px; margin: 0 auto; padding: 0 2rem 6rem; }
+    h2 { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--heading); margin: 3rem 0 1rem; }
+    h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--heading); margin: 2rem 0 0.75rem; }
+    p { margin-bottom: 1.25rem; }
+    .tool { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 1.5rem; margin: 1.5rem 0; display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: start; }
+    .tool-info h3 { margin: 0 0 0.4rem; font-size: 1rem; }
+    .tool-info p { margin: 0; font-size: 0.9rem; color: var(--muted); }
+    .tool-price { font-family: 'Syne', sans-serif; font-weight: 700; color: var(--accent); font-size: 0.9rem; white-space: nowrap; }
+    blockquote { border-left: 2px solid var(--accent); padding: 1rem 1.5rem; margin: 2rem 0; color: var(--muted); font-style: italic; }
+    .cta-box { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 2.5rem; text-align: center; margin: 4rem 0 2rem; }
+    .cta-box h3 { font-family: 'Syne', sans-serif; font-size: 1.4rem; color: var(--heading); margin: 0 0 0.75rem; }
+    .cta-box p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .btn { display: inline-block; background: var(--accent); color: #0d0f12; font-weight: 600; padding: 0.85rem 2rem; border-radius: 3px; text-decoration: none; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; color: var(--muted); font-size: 0.8rem; }
+    @media (max-width: 640px) { .tool { grid-template-columns: 1fr; } nav { display: none; } .hero, article { padding-left: 1.25rem; padding-right: 1.25rem; } }
+  </style>
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="AgentsAutonomes.ai" />
+  <meta property="og:title" content="Agent IA pour traiter les demandes de devis : qualifier, préparer, relancer" />
+  <meta property="og:description" content="Architecture d&#x27;un agent IA qui lit les demandes de devis entrantes, les qualifie, prépare un projet de devis à partir de votre grille tarifaire et relance au bon moment, avec un humain qui valide chaque envoi." />
+  <meta property="og:url" content="https://agentsautonomes.ai/agent-ia-demandes-de-devis" />
+  <meta property="article:published_time" content="2026-10-12" />
+  <meta property="article:modified_time" content="2026-10-12" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Agent IA pour traiter les demandes de devis : qualifier, préparer, relancer" />
+  <meta name="twitter:description" content="Architecture d&#x27;un agent IA qui lit les demandes de devis entrantes, les qualifie, prépare un projet de devis à partir de votre grille tarifaire et relance au bon moment, avec un humain qui valide chaque envoi." />
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Agent IA pour traiter les demandes de devis : qualifier, préparer, relancer", "description": "Architecture d'un agent IA qui lit les demandes de devis entrantes, les qualifie, prépare un projet de devis à partir de votre grille tarifaire et relance au bon moment, avec un humain qui valide chaque envoi.", "inLanguage": "fr-FR", "mainEntityOfPage": "https://agentsautonomes.ai/agent-ia-demandes-de-devis", "datePublished": "2026-10-12", "dateModified": "2026-10-12", "image": "https://agentsautonomes.ai/og-image.png", "author": {"@type": "Organization", "name": "AgentsAutonomes.ai", "url": "https://agentsautonomes.ai/"}, "publisher": {"@type": "Organization", "name": "AgentsAutonomes.ai", "url": "https://agentsautonomes.ai/"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://agentsautonomes.ai/"}, {"@type": "ListItem", "position": 2, "name": "Agent IA pour traiter les demandes de devis : qualifier, préparer, relancer", "item": "https://agentsautonomes.ai/agent-ia-demandes-de-devis"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "L'agent peut-il envoyer les devis seul ?", "acceptedAnswer": {"@type": "Answer", "text": "Non : il prépare des brouillons à partir de votre grille tarifaire, et un commercial valide chaque envoi, en particulier les prix et les délais."}}, {"@type": "Question", "name": "Faut-il un CRM pour démarrer ?", "acceptedAnswer": {"@type": "Answer", "text": "Non, un tableur suffit pour consigner les demandes et leur statut au départ. Un CRM devient utile quand le volume augmente."}}, {"@type": "Question", "name": "Par où commencer ?", "acceptedAnswer": {"@type": "Answer", "text": "Par la qualification automatique sur un mois de demandes passées, comparée au classement fait par votre équipe."}}]}]</script>
+  <style id="seo-extra">
+.related{margin:3rem 0 2rem;padding-top:2rem;border-top:1px solid var(--border,#ddd)}
+.related h2{margin-top:0}
+.related ul{list-style:none;padding:0;margin:0;display:grid;gap:.75rem}
+.related a{display:block;padding:1rem 1.25rem;background:var(--surface,#fff);border:1px solid var(--border,#ddd);border-radius:4px;color:var(--accent,#1a3a5c);text-decoration:none;font-weight:600}
+.related a:hover{border-color:var(--accent,#1a3a5c)}
+</style>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0d0f12" />
+  <meta property="og:image" content="https://agentsautonomes.ai/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:image" content="https://agentsautonomes.ai/og-image.png" />
+  <link rel="alternate" type="application/rss+xml" title="AgentsAutonomes.ai" href="https://agentsautonomes.ai/feed.xml" />
+  <meta name="robots" content="max-image-preview:large" />
+
+<style>
+.nl-inline{margin:2rem 0;padding:1rem 1.25rem;border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:6px;display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between}
+.nl-inline p{margin:0!important;font-size:.95rem}
+.nl-inline a{font-weight:700;color:var(--accent);text-decoration:none;white-space:nowrap}
+.share{margin:1.5rem 0 0;display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;font-size:.85rem;color:var(--muted)}
+.share a,.share button{border:1px solid var(--border);border-radius:4px;padding:.35rem .7rem;color:inherit;text-decoration:none;background:none;font:inherit;cursor:pointer}
+.share a:hover,.share button:hover{color:var(--accent);border-color:var(--accent)}
+.sister{max-width:720px;margin:0 auto 2.5rem;padding:1.25rem 1.5rem;border:1px solid var(--border);border-radius:8px;font-size:.9rem;color:var(--muted)}
+.sister strong{color:var(--heading)}
+.sister a{color:var(--accent);font-weight:600;text-decoration:none}
+</style>
+</head>
+<body>
+<header>
+  <a href="/" class="logo">agents<span>autonomes</span>.ai</a>
+  <nav><a href="/">Accueil</a><a href="/#newsletter">Newsletter</a></nav>
+</header>
+<div class="hero">
+  <div class="tag">Commercial</div>
+  <h1>Agent IA pour traiter les demandes de devis : qualifier, préparer, relancer</h1>
+  <p class="meta">Octobre 2026 &nbsp;·&nbsp; 6 min de lecture</p>
+</div>
+<article>
+
+  <p>Une demande de devis traitée tard est souvent une vente perdue. Pourtant, dans beaucoup de PME, les demandes arrivent par plusieurs canaux (formulaire, e-mail, téléphone retranscrit) et attendent qu'une personne trouve le temps de les lire. Un agent IA peut prendre en charge le tri et la préparation, pour que l'équipe commerciale se concentre sur la décision et la relation.</p>
+  <p><strong>Transparence :</strong> cet article décrit une architecture et des bonnes pratiques. Aucun gain chiffré n'est annoncé : mesurez-le sur vos propres demandes.</p>
+
+  <h2>Ce que fait l'agent, étape par étape</h2>
+  <ul style="margin:0 0 1.25rem 1.25rem"><li style="margin-bottom:.5rem"><strong>Réception :</strong> une boîte e-mail dédiée et le formulaire du site alimentent un même flux (déclencheur n8n ou Make).</li><li style="margin-bottom:.5rem"><strong>Extraction :</strong> un modèle de langage relève le besoin, les quantités, les délais, le budget éventuel et les coordonnées, et signale les informations manquantes.</li><li style="margin-bottom:.5rem"><strong>Qualification :</strong> l'agent compare la demande à vos critères écrits (zone géographique, taille minimale, type de prestation) et la classe : prioritaire, standard, hors cible.</li><li style="margin-bottom:.5rem"><strong>Préparation :</strong> pour les demandes standard, il prépare un projet de devis à partir de votre grille tarifaire et de modèles validés, enregistré en brouillon.</li><li style="margin-bottom:.5rem"><strong>Validation :</strong> un commercial relit, ajuste et envoie. Aucun prix ne part sans validation humaine.</li><li style="margin-bottom:.5rem"><strong>Relance :</strong> sans réponse après le délai que vous fixez, l'agent prépare une relance personnalisée, elle aussi validée avant envoi.</li><li style="margin-bottom:.5rem"><strong>CRM :</strong> chaque étape est consignée (date, statut, montant) pour suivre le taux de transformation.</li></ul>
+
+  <div class="nl-inline"><p>🎁 Offert à l'inscription : le guide <strong>« 5 agents IA prêts à copier pour une PME »</strong> (PDF), puis un agent concret chaque semaine.</p><a href="https://03124398.sibforms.com/serve/MUIFAFoM4hHHdN91Irjh6RF7mz8A6AqR2L54ja7v11FdkFUrKPVjuO4hBA1Hdj2mA7E3m-qy5Ovrz7IEh31uVUu8ZAYDPbViiphznXEX52qH3pJnhe-T1twydxlFKp_mQdDWNf0rJgM9FrRKhjdtGIbDvvUkDEi6JUlCnSiT_rltLqIQQgnr-KeSklNvsvgtqaiH7cwOMr-bWRfIUg==" target="_blank" rel="noopener">Recevoir le guide →</a></div>
+  <h2>Les garde-fous indispensables</h2>
+  <ul style="margin:0 0 1.25rem 1.25rem"><li style="margin-bottom:.5rem"><strong>Prix et engagements :</strong> l'agent ne s'engage jamais seul sur un prix, un délai ou une remise. Il n'utilise que la grille tarifaire en vigueur.</li><li style="margin-bottom:.5rem"><strong>Conditions de paiement :</strong> les devis reprennent vos conditions générales, dont les délais et pénalités de retard. Voir <a href='https://assistantjuridique.ai/delais-de-paiement-entre-entreprises-penalites' style='color:var(--accent)'>les règles des délais de paiement entre entreprises</a>.</li><li style="margin-bottom:.5rem"><strong>Données des prospects :</strong> les demandes contiennent des données personnelles. Inscrivez ce traitement dans votre <a href='https://assistantjuridique.ai/registre-traitements-rgpd-pme' style='color:var(--accent)'>registre RGPD</a> et vérifiez les conditions du fournisseur du modèle de langage.</li><li style="margin-bottom:.5rem"><strong>Transparence :</strong> si l'agent répond lui-même au prospect (accusé de réception, questions complémentaires), indiquez qu'il s'agit d'un assistant automatisé. Voir <a href='/ai-act-pme-agent-ia-obligations-2026' style='color:var(--accent)'>ce que l'AI Act impose en 2026</a>.</li><li style="margin-bottom:.5rem"><strong>Cas sensibles :</strong> les demandes hors cible, urgentes ou d'un client existant important passent directement à un humain.</li></ul>
+
+  <h2>Mise en place pas à pas</h2>
+  <ol style="margin:0 0 1.25rem 1.25rem">
+    <li style="margin-bottom:.5rem">Écrivez vos critères de qualification et votre grille tarifaire dans un document clair : c'est la base de l'agent.</li>
+    <li style="margin-bottom:.5rem">Centralisez les demandes dans un seul canal avant d'automatiser.</li>
+    <li style="margin-bottom:.5rem">Commencez par l'extraction et la qualification seules, sur un mois de demandes passées, et comparez avec le classement de votre équipe.</li>
+    <li style="margin-bottom:.5rem">Ajoutez ensuite les projets de devis pour une seule famille de prestations.</li>
+    <li style="margin-bottom:.5rem">Mesurez sur un trimestre : délai de première réponse, taux de transformation, temps passé par devis.</li>
+  </ol>
+  <p>Pour choisir les outils, consultez notre <a href="/meilleurs-outils-agent-ia-sans-developpeur" style="color:var(--accent)">guide des outils pour déployer un agent IA sans développeur</a>, et pour la prospection en amont, <a href="/agent-ia-prospection-commerciale" style="color:var(--accent)">l'agent IA de prospection commerciale</a>.</p>
+
+  <h2>Questions fréquentes</h2>
+  <h3>L'agent peut-il envoyer les devis seul ?</h3>
+  <p>Non : il prépare des brouillons à partir de votre grille tarifaire, et un commercial valide chaque envoi, en particulier les prix et les délais.</p>
+  <h3>Faut-il un CRM pour démarrer ?</h3>
+  <p>Non, un tableur suffit pour consigner les demandes et leur statut au départ. Un CRM devient utile quand le volume augmente.</p>
+  <h3>Par où commencer ?</h3>
+  <p>Par la qualification automatique sur un mois de demandes passées, comparée au classement fait par votre équipe.</p>
+
+
+  <div class="cta-box">
+    <h3>Un agent concret chaque semaine</h3>
+    <p>Cas d'usage réels, outils testés, sans jargon technique.</p>
+    <a href="https://03124398.sibforms.com/serve/MUIFAFoM4hHHdN91Irjh6RF7mz8A6AqR2L54ja7v11FdkFUrKPVjuO4hBA1Hdj2mA7E3m-qy5Ovrz7IEh31uVUu8ZAYDPbViiphznXEX52qH3pJnhe-T1twydxlFKp_mQdDWNf0rJgM9FrRKhjdtGIbDvvUkDEi6JUlCnSiT_rltLqIQQgnr-KeSklNvsvgtqaiH7cwOMr-bWRfIUg==" target="_blank" rel="noopener" class="btn">Recevoir le guide des 5 agents IA →</a>
+  </div>
+  <div class="share" aria-label="Partager cet article">Partager : <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fagentsautonomes.ai%2Fagent-ia-demandes-de-devis" target="_blank" rel="noopener">LinkedIn</a> <a href="https://x.com/intent/post?url=https%3A%2F%2Fagentsautonomes.ai%2Fagent-ia-demandes-de-devis&amp;text=Agent%20IA%20pour%20traiter%20les%20demandes%20de%20devis%20%3A%20qualifier%2C%20pr%C3%A9parer%2C%20relancer" target="_blank" rel="noopener">X</a> <a href="https://wa.me/?text=Agent%20IA%20pour%20traiter%20les%20demandes%20de%20devis%20%3A%20qualifier%2C%20pr%C3%A9parer%2C%20relancer%20https%3A%2F%2Fagentsautonomes.ai%2Fagent-ia-demandes-de-devis" target="_blank" rel="noopener">WhatsApp</a> <a href="mailto:?subject=Agent%20IA%20pour%20traiter%20les%20demandes%20de%20devis%20%3A%20qualifier%2C%20pr%C3%A9parer%2C%20relancer&amp;body=Cet%20article%20devrait%20t%27int%C3%A9resser%20%3A%20https%3A%2F%2Fagentsautonomes.ai%2Fagent-ia-demandes-de-devis">E-mail</a> <button type="button" class="share-copy" data-url="https://agentsautonomes.ai/agent-ia-demandes-de-devis">Copier le lien</button></div>
+
+  <section class="related" aria-label="À lire aussi"><h2>À lire aussi</h2><ul><li><a href="/agent-ia-prospection-commerciale">Comment créer un agent IA pour automatiser sa prospection commerciale</a></li><li><a href="/agent-ia-relance-factures-impayees">Agent IA de relance des factures impayées : règles, séquence et garde-fous</a></li><li><a href="/ai-act-pme-agent-ia-obligations-2026">AI Act : ce qu&#x27;une PME qui utilise un agent IA doit faire en 2026</a></li></ul></section>
+
+</article>
+<aside class="sister" aria-label="Du même éditeur"><strong>Du même éditeur :</strong> <a href="https://assistantjuridique.ai/?utm_source=agentsautonomes.ai&amp;utm_medium=referral&amp;utm_campaign=cross" rel="noopener">AssistantJuridique.ai</a> — L'IA juridique expliquée simplement pour les TPE et PME : contrats, RGPD, RH. <br><a href="https://modelefinance.ai/?utm_source=agentsautonomes.ai&amp;utm_medium=referral&amp;utm_campaign=cross" rel="noopener">modelefinance.ai</a> — Du P&amp;L au commentaire CODIR : outil gratuit et guides de reporting financier pour PME.</aside>
+<footer><p>© 2026 AgentsAutonomes.ai — Tous droits réservés &nbsp;·&nbsp; <a href="/mentions-legales" style="color:inherit">Mentions légales</a> &nbsp;·&nbsp; <a href="/confidentialite" style="color:inherit">Confidentialité</a></p></footer>
+<script>
+document.querySelectorAll('.share-copy').forEach(function(b){b.addEventListener('click',function(){
+  navigator.clipboard.writeText(b.dataset.url).then(function(){b.textContent='Lien copié ✓';setTimeout(function(){b.textContent='Copier le lien'},1800)});
+});});
+</script>
+</body>
+</html>

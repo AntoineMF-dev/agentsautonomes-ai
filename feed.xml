@@ -6,7 +6,14 @@
   <description>Les agents IA autonomes en pratique : cas d&#x27;usage, outils et garde-fous pour les PME.</description>
   <language>fr-FR</language>
   <atom:link href="https://agentsautonomes.ai/feed.xml" rel="self" type="application/rss+xml" />
-  <lastBuildDate>Sat, 10 Oct 2026 08:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 12 Oct 2026 08:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Agent IA pour traiter les demandes de devis : qualifier, préparer, relancer</title>
+    <link>https://agentsautonomes.ai/agent-ia-demandes-de-devis</link>
+    <guid isPermaLink="true">https://agentsautonomes.ai/agent-ia-demandes-de-devis</guid>
+    <pubDate>Mon, 12 Oct 2026 08:00:00 +0000</pubDate>
+    <description>Architecture d&#x27;un agent IA qui lit les demandes de devis entrantes, les qualifie, prépare un projet de devis à partir de votre grille tarifaire et relance au bon moment, avec un humain qui valide chaque envoi.</description>
+  </item>
   <item>
     <title>Agent IA pour traiter les factures fournisseurs : architecture et garde-fous</title>
     <link>https://agentsautonomes.ai/agent-ia-factures-fournisseurs</link>
