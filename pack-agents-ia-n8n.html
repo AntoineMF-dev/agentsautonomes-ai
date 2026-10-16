@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pack 5 agents IA n8n pour PME : e-mails, factures, SAV, veille, devis</title>
+  <meta name="description" content="5 workflows n8n prêts à importer : tri des e-mails, relance des factures impayées, SAV, veille concurrentielle et demandes de devis. Brouillons relus par vous, guide en français." />
+  <link rel="canonical" href="https://agentsautonomes.ai/pack-agents-ia-n8n" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #0d0f12; --surface: #151820; --border: #1e2230; --accent: #00e5a0; --accent-dim: rgba(0,229,160,0.12); --text: #e8eaf0; --muted: #6b7080; --heading: #ffffff; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.75; }
+    header { border-bottom: 1px solid var(--border); padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--accent); text-decoration: none; }
+    .logo span { color: var(--heading); }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-left: 2rem; }
+    .hero { max-width: 760px; margin: 4rem auto 0; padding: 0 2rem; }
+    .tag { display: inline-block; background: var(--accent-dim); color: var(--accent); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 2px; margin-bottom: 1.5rem; }
+    h1 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; color: var(--heading); line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 1.25rem; }
+    .meta { color: var(--muted); font-size: 0.85rem; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+    article { max-width: 760px; margin: 0 auto; padding: 0 2rem 6rem; }
+    h2 { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--heading); margin: 3rem 0 1rem; }
+    h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--heading); margin: 2rem 0 0.75rem; }
+    p { margin-bottom: 1.25rem; }
+    .tool { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 1.5rem; margin: 1.5rem 0; display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: start; }
+    .tool-info h3 { margin: 0 0 0.4rem; font-size: 1rem; }
+    .tool-info p { margin: 0; font-size: 0.9rem; color: var(--muted); }
+    .tool-price { font-family: 'Syne', sans-serif; font-weight: 700; color: var(--accent); font-size: 0.9rem; white-space: nowrap; }
+    blockquote { border-left: 2px solid var(--accent); padding: 1rem 1.5rem; margin: 2rem 0; color: var(--muted); font-style: italic; }
+    .cta-box { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 2.5rem; text-align: center; margin: 4rem 0 2rem; }
+    .cta-box h3 { font-family: 'Syne', sans-serif; font-size: 1.4rem; color: var(--heading); margin: 0 0 0.75rem; }
+    .cta-box p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .btn { display: inline-block; background: var(--accent); color: #0d0f12; font-weight: 600; padding: 0.85rem 2rem; border-radius: 3px; text-decoration: none; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; color: var(--muted); font-size: 0.8rem; }
+    @media (max-width: 640px) { .tool { grid-template-columns: 1fr; } nav { display: none; } .hero, article { padding-left: 1.25rem; padding-right: 1.25rem; } }
+  </style>
+  <meta property="og:type" content="product" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="AgentsAutonomes.ai" />
+  <meta property="og:title" content="Pack 5 agents IA n8n pour PME : e-mails, factures, SAV, veille, devis" />
+  <meta property="og:description" content="5 workflows n8n prêts à importer : tri des e-mails, relance des factures impayées, SAV, veille concurrentielle et demandes de devis. Brouillons relus par vous, guide en français." />
+  <meta property="og:url" content="https://agentsautonomes.ai/pack-agents-ia-n8n" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Pack 5 agents IA n8n pour PME : e-mails, factures, SAV, veille, devis" />
+  <meta name="twitter:description" content="5 workflows n8n prêts à importer : tri des e-mails, relance des factures impayées, SAV, veille concurrentielle et demandes de devis. Brouillons relus par vous, guide en français." />
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Product", "name": "Pack 5 agents IA n8n", "description": "5 workflows n8n prêts à importer : tri des e-mails, relance des factures impayées, SAV, veille concurrentielle et demandes de devis. Brouillons relus par vous, guide en français.", "image": "https://agentsautonomes.ai/og-image.png", "brand": {"@type": "Brand", "name": "AgentsAutonomes.ai"}, "offers": {"@type": "Offer", "price": "49.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://agentsautonomes.ai/pack-agents-ia-n8n"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://agentsautonomes.ai/"}, {"@type": "ListItem", "position": 2, "name": "Pack 5 agents IA n8n", "item": "https://agentsautonomes.ai/pack-agents-ia-n8n"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Je ne suis pas développeur, je vais y arriver ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Vous importez un fichier, vous connectez vos comptes et vous remplissez un nœud de configuration en français. Le guide détaille chaque étape."}}, {"@type": "Question", "name": "L'IA peut-elle envoyer n'importe quoi à mes clients ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Tout ce qui leur est destiné est créé en brouillon dans Gmail, que vous relisez avant l'envoi. Seules les alertes et le briefing de veille vous sont envoyés directement, à vous."}}, {"@type": "Question", "name": "De quoi ai-je besoin pour l'utiliser ?", "acceptedAnswer": {"@type": "Answer", "text": "Une instance n8n (version cloud ou installée sur votre serveur), un compte Google avec Gmail et Google Sheets, et une clé d'API Anthropic pour le modèle Claude."}}, {"@type": "Question", "name": "Combien coûte l'IA à l'usage ?", "acceptedAnswer": {"@type": "Answer", "text": "L'usage de Claude est facturé directement par Anthropic selon le volume traité. Vous pouvez fixer une limite de dépense dans votre compte Anthropic."}}, {"@type": "Question", "name": "Et le RGPD ?", "acceptedAnswer": {"@type": "Answer", "text": "Les workflows traitent des données personnelles : ils doivent figurer dans votre registre. Le Kit conformité, proposé au paiement, contient une fiche prête à adapter pour chacun."}}, {"@type": "Question", "name": "Je n'utilise pas Gmail, c'est possible ?", "acceptedAnswer": {"@type": "Answer", "text": "Les workflows sont construits pour Gmail et Google Sheets. n8n permet de remplacer ces nœuds par d'autres services, mais le guide ne couvre que Gmail et Google Sheets."}}, {"@type": "Question", "name": "Comment je reçois le pack ?", "acceptedAnswer": {"@type": "Answer", "text": "Juste après le paiement, un bouton vous permet de télécharger le pack, et le lien vous est aussi envoyé par e-mail."}}]}]</script>
+  <style id="seo-extra">
+.related{margin:3rem 0 2rem;padding-top:2rem;border-top:1px solid var(--border,#ddd)}
+.related h2{margin-top:0}
+.related ul{list-style:none;padding:0;margin:0;display:grid;gap:.75rem}
+.related a{display:block;padding:1rem 1.25rem;background:var(--surface,#fff);border:1px solid var(--border,#ddd);border-radius:4px;color:var(--accent,#1a3a5c);text-decoration:none;font-weight:600}
+.related a:hover{border-color:var(--accent,#1a3a5c)}
+</style>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0d0f12" />
+  <meta property="og:image" content="https://agentsautonomes.ai/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:image" content="https://agentsautonomes.ai/og-image.png" />
+  <link rel="alternate" type="application/rss+xml" title="AgentsAutonomes.ai" href="https://agentsautonomes.ai/feed.xml" />
+  <meta name="robots" content="max-image-preview:large" />
+
+<style>
+.nl-inline{margin:2rem 0;padding:1rem 1.25rem;border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:6px;display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between}
+.nl-inline p{margin:0!important;font-size:.95rem}
+.nl-inline a{font-weight:700;color:var(--accent);text-decoration:none;white-space:nowrap}
+.share{margin:1.5rem 0 0;display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;font-size:.85rem;color:var(--muted)}
+.share a,.share button{border:1px solid var(--border);border-radius:4px;padding:.35rem .7rem;color:inherit;text-decoration:none;background:none;font:inherit;cursor:pointer}
+.share a:hover,.share button:hover{color:var(--accent);border-color:var(--accent)}
+.sister{max-width:720px;margin:0 auto 2.5rem;padding:1.25rem 1.5rem;border:1px solid var(--border);border-radius:8px;font-size:.9rem;color:var(--muted)}
+.sister strong{color:var(--heading)}
+.sister a{color:var(--accent);font-weight:600;text-decoration:none}
+</style>
+<style>
+.price{font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;color:var(--heading)}
+.price s{color:var(--muted);font-size:1.3rem;font-weight:600;margin-right:.5rem}
+.agents{display:grid;gap:1rem;margin:1.5rem 0}
+.agent{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:1.25rem 1.5rem}
+.agent h3{margin:0 0 .4rem;font-size:1.05rem}
+.agent p{margin:0;font-size:.95rem;color:var(--text)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin:1.5rem 0}
+.cols>div{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:1.25rem 1.5rem}
+.cols h3{margin-top:0}
+.cols ul{margin:0 0 0 1.1rem}
+.hero .btn{margin-top:.5rem}
+.cta-box p.price{color:var(--heading);font-size:2rem;margin-bottom:1rem}
+.small{font-size:.85rem;color:var(--muted)}
+@media (max-width:640px){.cols{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <a href="/" class="logo">agents<span>autonomes</span>.ai</a>
+  <nav><a href="/">Accueil</a><a href="/#newsletter">Newsletter</a></nav>
+</header>
+<div class="hero">
+  <div class="tag">Pack de workflows n8n</div>
+  <h1>Confiez chaque matin le travail répétitif de votre entreprise à 5 assistants IA</h1>
+  <p>Cinq workflows n8n prêts à importer pour trier vos e-mails, relancer vos factures, répondre au SAV, surveiller vos concurrents et préparer vos devis.</p>
+  <p class="price"><s>49 €</s>39 €</p>
+  <p class="small">Prix de lancement avec le code LANCEMENT, déjà appliqué, jusqu'au 30 novembre 2026.</p>
+  <a href="https://lemaireantoine.tinypages.co/system/checkout/9e107817-150f-4461-b7f4-69c4cad3cc13?coupon=LANCEMENT" class="btn" rel="noopener">Obtenir le pack →</a>
+  <p class="meta" style="margin-top:2rem">Paiement sécurisé · Téléchargement immédiat · Guide en français</p>
+</div>
+<article>
+
+  <h2>Vos journées partent dans des tâches qui n'avancent pas votre entreprise</h2>
+  <p>Le matin, vous triez votre boîte mail : clients, prospects, factures fournisseurs, newsletters. Puis vous répondez encore une fois aux mêmes questions sur un délai de livraison ou un retour.</p>
+  <p>L'après-midi, vous cherchez les factures en retard et vous rédigez une relance, puis une deuxième. <strong>Chaque facture impayée oubliée pèse directement sur votre trésorerie.</strong> Entre les deux, une demande de devis attend depuis trois jours.</p>
+  <p>Vous avez peut-être déjà ouvert n8n devant une page blanche, ou suivi un tutoriel qui s'arrêtait juste avant la partie utile. <strong>Ce qui manque, ce n'est pas l'outil : c'est un circuit déjà câblé.</strong></p>
+
+  <h2>Ce que chaque agent fait pour vous</h2>
+  <div class="agents">
+    <div class="agent"><h3>1. Tri des e-mails</h3><p>Chaque nouvel e-mail est classé (client, prospect, facture fournisseur, newsletter, à ignorer, autre), étiqueté dans Gmail et consigné dans un tableur. Pour les clients et les prospects, un brouillon de réponse vous attend.</p></div>
+    <div class="agent"><h3>2. Relance des factures impayées</h3><p>Chaque matin, l&#x27;agent lit votre tableur de factures et prépare une relance adaptée à l&#x27;étape pour chaque facture échue. Après la deuxième relance, il vous alerte au lieu d&#x27;insister. Les factures en litige sont laissées de côté.</p></div>
+    <div class="agent"><h3>3. SAV de premier niveau</h3><p>Les demandes courantes (suivi de commande, retour, garantie) reçoivent un brouillon de réponse fondé uniquement sur votre base de réponses. Une demande sensible déclenche une alerte immédiate vers un humain.</p></div>
+    <div class="agent"><h3>4. Veille concurrentielle</h3><p>Chaque lundi à 7 h, l&#x27;agent lit les flux RSS que vous avez choisis et vous envoie un briefing court de la semaine.</p></div>
+    <div class="agent"><h3>5. Demandes de devis</h3><p>Un formulaire recueille la demande. L&#x27;agent la qualifie selon vos critères, prépare un projet de devis à partir de votre grille tarifaire et prévient votre commercial. Chaque demande est suivie dans un tableur.</p></div>
+  </div>
+  <p>Pour comprendre en détail le fonctionnement de chacun, lisez nos guides : <a href="/agent-ia-trier-emails-n8n" style="color:var(--accent)">tri des e-mails</a>, <a href="/agent-ia-relance-factures-impayees" style="color:var(--accent)">relance des factures</a>, <a href="/agent-ia-sav" style="color:var(--accent)">SAV</a>, <a href="/agent-ia-veille-concurrentielle" style="color:var(--accent)">veille</a> et <a href="/agent-ia-demandes-de-devis" style="color:var(--accent)">demandes de devis</a>.</p>
+
+  <h2>Simple à régler, et rien ne part sans votre accord</h2>
+  <p>Les réglages de chaque workflow sont regroupés dans un seul nœud (« Configuration », ou « Sources » pour la veille), avec une note en français qui explique quoi régler : délais de relance, critères de devis, base de réponses du SAV. <strong>Vous n'avez pas besoin d'écrire une ligne de code.</strong></p>
+  <p><strong>Tout ce qui est destiné à un client est préparé en brouillon dans Gmail.</strong> Vous relisez, vous corrigez si besoin, vous envoyez. Le guide d'installation vous accompagne de l'import au premier test, et les modèles de tableurs sont fournis avec les bonnes colonnes.</p>
+
+  <div class="cols">
+    <div><h3>✅ Pour vous si</h3><ul><li>vous dirigez une TPE ou une PME, ou vous êtes indépendant</li><li>vous travaillez avec Gmail et Google Sheets</li><li>vous voulez gagner du temps sans embaucher</li><li>vous acceptez de passer une heure à installer et régler les workflows</li></ul></div>
+    <div><h3>❌ Pas pour vous si</h3><ul><li>vous voulez que l'IA écrive à vos clients sans relecture</li><li>vous n'utilisez ni Gmail ni Google Sheets</li><li>vous cherchez un logiciel sans aucun réglage</li><li>vous refusez d'utiliser n8n</li></ul></div>
+  </div>
+
+  <div class="cta-box">
+    <h3>Tout ce qu'il faut pour installer vos 5 agents</h3>
+    <p>Les 5 workflows n8n prêts à importer · le guide d'installation pas à pas (PDF) · les modèles de tableurs Journal, Factures et Devis.</p>
+    <p class="price"><s>49 €</s>39 €</p>
+    <p>Au paiement, vous pouvez ajouter le <strong>Kit conformité</strong> (19 €) : une fiche de registre RGPD par workflow, les mentions de transparence IA et une checklist de mise en production.</p>
+    <a href="https://lemaireantoine.tinypages.co/system/checkout/9e107817-150f-4461-b7f4-69c4cad3cc13?coupon=LANCEMENT" class="btn" rel="noopener">Profiter du prix de lancement →</a>
+  </div>
+
+  <h2>Ce qu'il vous faut</h2>
+  <ul style="margin:0 0 1.25rem 1.25rem"><li style="margin-bottom:.5rem">une instance n8n, en version cloud ou installée sur votre serveur ;</li><li style="margin-bottom:.5rem">un compte Google avec Gmail et Google Sheets ;</li><li style="margin-bottom:.5rem">une clé d'API Anthropic pour le modèle Claude, dont l'usage est facturé par Anthropic.</li></ul>
+
+  <h2>Questions fréquentes</h2>
+  <h3>Je ne suis pas développeur, je vais y arriver ?</h3>
+  <p>Oui. Vous importez un fichier, vous connectez vos comptes et vous remplissez un nœud de configuration en français. Le guide détaille chaque étape.</p>
+  <h3>L&#x27;IA peut-elle envoyer n&#x27;importe quoi à mes clients ?</h3>
+  <p>Non. Tout ce qui leur est destiné est créé en brouillon dans Gmail, que vous relisez avant l&#x27;envoi. Seules les alertes et le briefing de veille vous sont envoyés directement, à vous.</p>
+  <h3>De quoi ai-je besoin pour l&#x27;utiliser ?</h3>
+  <p>Une instance n8n (version cloud ou installée sur votre serveur), un compte Google avec Gmail et Google Sheets, et une clé d&#x27;API Anthropic pour le modèle Claude.</p>
+  <h3>Combien coûte l&#x27;IA à l&#x27;usage ?</h3>
+  <p>L&#x27;usage de Claude est facturé directement par Anthropic selon le volume traité. Vous pouvez fixer une limite de dépense dans votre compte Anthropic.</p>
+  <h3>Et le RGPD ?</h3>
+  <p>Les workflows traitent des données personnelles : ils doivent figurer dans votre registre. Le Kit conformité, proposé au paiement, contient une fiche prête à adapter pour chacun.</p>
+  <h3>Je n&#x27;utilise pas Gmail, c&#x27;est possible ?</h3>
+  <p>Les workflows sont construits pour Gmail et Google Sheets. n8n permet de remplacer ces nœuds par d&#x27;autres services, mais le guide ne couvre que Gmail et Google Sheets.</p>
+  <h3>Comment je reçois le pack ?</h3>
+  <p>Juste après le paiement, un bouton vous permet de télécharger le pack, et le lien vous est aussi envoyé par e-mail.</p>
+
+  <div class="cta-box">
+    <h3>Prêt à installer vos 5 agents ?</h3>
+    <p>39 € au lieu de 49 € jusqu'au 30 novembre 2026. Téléchargement immédiat après le paiement.</p>
+    <a href="https://lemaireantoine.tinypages.co/system/checkout/9e107817-150f-4461-b7f4-69c4cad3cc13?coupon=LANCEMENT" class="btn" rel="noopener">Obtenir le pack →</a>
+  </div>
+
+</article>
+<aside class="sister" aria-label="Du même éditeur"><strong>Du même éditeur :</strong> <a href="https://assistantjuridique.ai/?utm_source=agentsautonomes.ai&amp;utm_medium=referral&amp;utm_campaign=cross" rel="noopener">AssistantJuridique.ai</a> — L'IA juridique expliquée simplement pour les TPE et PME : contrats, RGPD, RH. <br><a href="https://modelefinance.ai/?utm_source=agentsautonomes.ai&amp;utm_medium=referral&amp;utm_campaign=cross" rel="noopener">modelefinance.ai</a> — Du P&amp;L au commentaire CODIR : outil gratuit et guides de reporting financier pour PME.</aside>
+<footer><p>© 2026 AgentsAutonomes.ai — Tous droits réservés &nbsp;·&nbsp; <a href="/mentions-legales" style="color:inherit">Mentions légales</a> &nbsp;·&nbsp; <a href="/confidentialite" style="color:inherit">Confidentialité</a></p></footer>
+<script>
+document.querySelectorAll('.share-copy').forEach(function(b){b.addEventListener('click',function(){
+  navigator.clipboard.writeText(b.dataset.url).then(function(){b.textContent='Lien copié ✓';setTimeout(function(){b.textContent='Copier le lien'},1800)});
+});});
+</script>
+</body>
+</html>
