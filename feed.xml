@@ -6,7 +6,14 @@
   <description>Les agents IA autonomes en pratique : cas d&#x27;usage, outils et garde-fous pour les PME.</description>
   <language>fr-FR</language>
   <atom:link href="https://agentsautonomes.ai/feed.xml" rel="self" type="application/rss+xml" />
-  <lastBuildDate>Mon, 12 Oct 2026 08:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 19 Oct 2026 08:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Agent IA de compte rendu de réunion : des notes brutes au CR validé</title>
+    <link>https://agentsautonomes.ai/agent-ia-compte-rendu-de-reunion</link>
+    <guid isPermaLink="true">https://agentsautonomes.ai/agent-ia-compte-rendu-de-reunion</guid>
+    <pubDate>Mon, 19 Oct 2026 08:00:00 +0000</pubDate>
+    <description>Comment un agent IA transforme des notes de réunion en compte rendu structuré (décisions, actions, responsables, échéances), avec relecture humaine, et les règles à respecter si vous enregistrez ou transcrivez.</description>
+  </item>
   <item>
     <title>Agent IA pour traiter les demandes de devis : qualifier, préparer, relancer</title>
     <link>https://agentsautonomes.ai/agent-ia-demandes-de-devis</link>
