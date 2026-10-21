@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tous les articles : agents IA autonomes pour PME</title>
+  <meta name="description" content="Les 21 articles d&#x27;AgentsAutonomes.ai par thème : finance, ventes, RH, conformité AI Act, choix des outils, panorama des agents IA." />
+  <link rel="canonical" href="https://agentsautonomes.ai/articles" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #0d0f12; --surface: #151820; --border: #1e2230; --accent: #00e5a0; --accent-dim: rgba(0,229,160,0.12); --text: #e8eaf0; --muted: #6b7080; --heading: #ffffff; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.75; min-height: 100vh; }
+    header { border-bottom: 1px solid var(--border); padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--accent); text-decoration: none; }
+    .logo span { color: var(--heading); }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-left: 2rem; }
+    .hero { max-width: 760px; margin: 6rem auto 0; padding: 0 2rem; text-align: center; }
+    .tag { display: inline-block; background: var(--accent-dim); color: var(--accent); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 2px; margin-bottom: 1.5rem; }
+    h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.2rem, 6vw, 3.5rem); font-weight: 800; color: var(--heading); line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
+    h1 span { color: var(--accent); }
+    .subtitle { font-size: 1.15rem; color: var(--muted); max-width: 540px; margin: 0 auto 3rem; }
+    .value-props { max-width: 760px; margin: 0 auto; padding: 0 2rem 4rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .prop { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 1.5rem; }
+    .prop-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    .prop h3 { font-family: 'Syne', sans-serif; font-weight: 700; color: var(--heading); font-size: 1rem; margin-bottom: 0.5rem; }
+    .prop p { font-size: 0.9rem; color: var(--muted); margin: 0; }
+    .newsletter-block { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 2.5rem; max-width: 540px; margin: 0 auto 5rem; }
+    .newsletter-block h2 { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--heading); margin-bottom: 0.5rem; }
+    .newsletter-block p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .sib-form { background: transparent !important; padding: 0 !important; }
+    #sib-container { background: transparent !important; border: none !important; max-width: 100% !important; padding: 0 !important; }
+    #sib-form-container { padding: 0 !important; }
+    .entry__label { display: none !important; }
+    .entry__specification { display: none !important; }
+.sib-form-block { display: block !important; }
+    .input { width: 100%; padding: 0.85rem 1rem; background: var(--bg); border: 1px solid var(--border); border-radius: 4px; color: var(--text); font-size: 1rem; margin-bottom: 0.75rem; font-family: 'Inter', sans-serif; }
+    .input:focus { outline: none; border-color: var(--accent); }
+    .input::placeholder { color: var(--muted); }
+    .sib-form-block__button { width: 100%; background: var(--accent) !important; color: #0d0f12 !important; font-family: 'Syne', sans-serif !important; font-size: 1rem !important; font-weight: 700 !important; padding: 0.9rem !important; border-radius: 4px !important; cursor: pointer; border: none !important; }
+    .articles { max-width: 760px; margin: 0 auto; padding: 0 2rem 6rem; }
+    .articles h2 { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--heading); margin-bottom: 0.5rem; }
+    .batch-label { font-size: 0.75rem; color: var(--muted); margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.08em; }
+    .article-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border-radius: 6px; overflow: hidden; margin-bottom: 2rem; }
+    .article-item { background: var(--surface); padding: 1.25rem 1.5rem; display: flex; align-items: center; justify-content: space-between; text-decoration: none; transition: background 0.2s; gap: 1rem; }
+    .article-item:hover { background: #1a1f2e; }
+    .article-title { font-family: 'Syne', sans-serif; font-weight: 600; color: var(--heading); font-size: 0.95rem; }
+    .article-arrow { color: var(--accent); font-size: 1.2rem; flex-shrink: 0; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; color: var(--muted); font-size: 0.8rem; }
+    @media (max-width: 640px) { nav { display: none; } .hero, .articles { padding-left: 1.25rem; padding-right: 1.25rem; } .value-props { grid-template-columns: 1fr; padding-left: 1.25rem; padding-right: 1.25rem; } .newsletter-block { margin-left: 1.25rem; margin-right: 1.25rem; } }
+  
+    .theme { font-family: 'Syne', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--heading); margin: 2.5rem 0 1rem; }
+    .page-hero { max-width: 760px; margin: 4rem auto 2rem; padding: 0 2rem; }
+    .page-hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 4.5vw, 2.5rem); font-weight: 800; color: var(--heading); line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 1rem; }
+  </style>
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="AssistantJuridique.ai" />
+  <meta property="og:title" content="Tous les articles : agents IA autonomes pour PME" />
+  <meta property="og:description" content="Les 21 articles d&#x27;AgentsAutonomes.ai par thème : finance, ventes, RH, conformité AI Act, choix des outils, panorama des agents IA." />
+  <meta property="og:url" content="https://agentsautonomes.ai/articles" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Tous les articles : agents IA autonomes pour PME" />
+  <meta name="twitter:description" content="Les 21 articles d&#x27;AgentsAutonomes.ai par thème : finance, ventes, RH, conformité AI Act, choix des outils, panorama des agents IA." />
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Tous les articles", "description": "Les 21 articles d'AgentsAutonomes.ai par thème : finance, ventes, RH, conformité AI Act, choix des outils, panorama des agents IA.", "url": "https://agentsautonomes.ai/articles", "inLanguage": "fr-FR", "mainEntity": {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://agentsautonomes.ai/agent-ia-comptabilite"}, {"@type": "ListItem", "position": 2, "url": "https://agentsautonomes.ai/agent-ia-factures-fournisseurs"}, {"@type": "ListItem", "position": 3, "url": "https://agentsautonomes.ai/agent-ia-relance-factures-impayees"}, {"@type": "ListItem", "position": 4, "url": "https://agentsautonomes.ai/roi-agent-ia"}, {"@type": "ListItem", "position": 5, "url": "https://agentsautonomes.ai/agent-ia-prospection-commerciale"}, {"@type": "ListItem", "position": 6, "url": "https://agentsautonomes.ai/agent-ia-demandes-de-devis"}, {"@type": "ListItem", "position": 7, "url": "https://agentsautonomes.ai/agent-ia-veille-concurrentielle"}, {"@type": "ListItem", "position": 8, "url": "https://agentsautonomes.ai/agent-ia-sav"}, {"@type": "ListItem", "position": 9, "url": "https://agentsautonomes.ai/agent-ia-rh-recrutement"}, {"@type": "ListItem", "position": 10, "url": "https://agentsautonomes.ai/agent-ia-gestion-projet"}, {"@type": "ListItem", "position": 11, "url": "https://agentsautonomes.ai/agent-ia-compte-rendu-de-reunion"}, {"@type": "ListItem", "position": 12, "url": "https://agentsautonomes.ai/agent-ia-trier-emails-n8n"}, {"@type": "ListItem", "position": 13, "url": "https://agentsautonomes.ai/ai-act-pme-agent-ia-obligations-2026"}, {"@type": "ListItem", "position": 14, "url": "https://agentsautonomes.ai/erreurs-agent-ia"}, {"@type": "ListItem", "position": 15, "url": "https://agentsautonomes.ai/meilleurs-outils-agent-ia-sans-developpeur"}, {"@type": "ListItem", "position": 16, "url": "https://agentsautonomes.ai/autogpt-crewai-n8n-quel-agent-choisir"}, {"@type": "ListItem", "position": 17, "url": "https://agentsautonomes.ai/agent-ia-vs-chatbot-pme"}, {"@type": "ListItem", "position": 18, "url": "https://agentsautonomes.ai/agent-ia-pme-zero-budget"}, {"@type": "ListItem", "position": 19, "url": "https://agentsautonomes.ai/agents-ia-bilan-2025"}, {"@type": "ListItem", "position": 20, "url": "https://agentsautonomes.ai/agents-ia-multimodaux"}, {"@type": "ListItem", "position": 21, "url": "https://agentsautonomes.ai/agents-ia-remplacent-salarie"}]}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://agentsautonomes.ai/"}, {"@type": "ListItem", "position": 2, "name": "Tous les articles", "item": "https://agentsautonomes.ai/articles"}]}]</script>
+  <style id="seo-extra">.article-text{display:flex;flex-direction:column;gap:.25rem}.article-desc{font-size:.8rem;font-weight:400;opacity:.7;line-height:1.5}</style>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0d0f12" />
+  <meta property="og:image" content="https://agentsautonomes.ai/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:image" content="https://agentsautonomes.ai/og-image.png" />
+  <link rel="alternate" type="application/rss+xml" title="AssistantJuridique.ai" href="https://agentsautonomes.ai/feed.xml" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+</head>
+<body>
+<header>
+  <a href="/" class="logo">agents<span>autonomes</span>.ai</a>
+  <nav><a href="/">Accueil</a><a href="/articles">Tous les articles</a><a href="/#newsletter">Newsletter</a></nav>
+</header>
+<div class="page-hero">
+  <h1>Tous les articles</h1>
+  <p class="subtitle" style="color:var(--muted)">Les 21 articles d'AgentsAutonomes.ai, classés par thème : finance, ventes, RH, conformité AI Act, outils et panorama des agents IA.</p>
+</div>
+<div class="articles" id="articles">
+  <h2 class="theme">Finance et comptabilité</h2>
+  <div class="article-list">
+    <a href="/agent-ia-comptabilite" class="article-item">
+      <span class="article-text"><span class="article-title">Agent IA et comptabilité : automatiser la saisie et les rapprochements</span><span class="article-desc">Comment un agent IA peut automatiser la saisie comptable et les rapprochements bancaires en PME : outils, limites, et ROI concret.</span></span>
+      <span class="article-arrow">→</span>
+    </a>
+    <a href="/agent-ia-factures-fournisseurs" class="article-item">
+      <span class="article-text"><span class="article-title">Agent IA pour traiter les factures fournisseurs : architecture et garde-fous</span><span class="article-desc">Factures fournisseurs en données structurées depuis sept. 2026 : architecture d&#x27;un agent IA qui contrôle et prépare la saisie, avec garde-fous anti-fraude.</span></span>
+      <span class="article-arrow">→</span>
+    </a>
+    <a href="/agent-ia-relance-factures-impayees" class="article-item">
+      <span class="article-text"><span class="article-title">Agent IA de relance des factures impayées : règles, séquence et garde-fous</span><span class="article-desc">Automatiser la relance des factures impayées avec un agent IA : règles de délais de paiement, séquence de relances, validation humaine et garde-fous.</span></span>
+      <span class="article-arrow">→</span>
+    </a>
+    <a href="/roi-agent-ia" class="article-item">
+      <span class="article-text"><span class="article-title">Comment mesurer le ROI d'un agent IA autonome</span><span class="article-desc">Méthode concrète pour calculer le retour sur investissement d'un agent IA en entreprise : indicateurs, baseline, calcul du gain réel.</span></span>
+      <span class="article-arrow">→</span>
+    </a>
+  </div>
+  <h2 class="theme">Ventes et marketing</h2>
+  <div class="article-list">
+    <a href="/agent-ia-prospection-commerciale" class="article-item">
+      <span class="article-text"><span class="article-title">Comment créer un agent IA pour automatiser sa prospection commerciale</span><span class="article-desc">Tutoriel pratique pour automatiser sa prospection commerciale avec un agent IA : outils, étapes, exemples concrets. Sans coder.</span></span>
+      <span class="article-arrow">→</span>
+    </a>
+    <a href="/agent-ia-demandes-de-devis" class="article-item">
+      <span class="article-text"><span class="article-title">Agent IA pour traiter les demandes de devis : qualifier, préparer, relancer</span><span class="article-desc">Agent IA pour demandes de devis : qualifier, préparer le devis depuis votre grille tarifaire et relancer, avec un humain qui valide chaque envoi.</span></span>
+      <span class="article-arrow">→</span>
+    </a>
+    <a href="/agent-ia-veille-concurrentielle" class="article-item">
+      <span class="article-text"><span class="article-title">Comment créer un agent IA de veille concurrentielle en 2026</span><span class="article-desc">Guide pratique pour automatiser sa veille concurrentielle avec un agent IA : sources, outils, fréquence, et format du livrable. Sans coder.</span></span>
+      <span class="article-arrow">→</span>
+    </a>
+    <a href="/agent-ia-sav" class="article-item">
+      <span class="article-text"><span class="article-title">Comment un agent IA peut gérer votre service après-vente automatiquement</span><span class="article-desc">Automatiser son SAV avec un agent IA : cas concrets, outils, limites et ROI. Guide pour PME qui veulent réduire les délais sans recruter.</span></span>
+      <span class="article-arrow">→</span>
+    </a>
+  </div>
+  <h2 class="theme">RH et organisation</h2>
+  <div class="article-list">
+    <a href="/agent-ia-rh-recrutement" class="article-item">
+      <span class="article-text"><span class="article-title">Agent IA et RH : automatiser le recrutement sans déshumaniser</span><span class="article-desc">Comment utiliser un agent IA pour accélérer le recrutement en PME sans perdre la dimension humaine. Cas concrets, outils, limites éthiques.</span></span>
+      <span class="article-arrow">→</span>
+    </a>
+    <a href="/agent-ia-gestion-projet" class="article-item">
+      <span class="article-text"><span class="article-title">Agent IA et gestion de projet : automatiser le suivi sans perdre le contrôle</span><span class="article-desc">Comment utiliser un agent IA pour automatiser le suivi de projet : reporting, relances, détection de risques — sans déshumaniser le management.</span></span>
+      <span class="article-arrow">→</span>
+    </a>
+    <a href="/agent-ia-compte-rendu-de-reunion" class="article-item">
+      <span class="article-text"><span class="article-title">Agent IA de compte rendu de réunion : des notes brutes au CR validé</span><span class="article-desc">Agent IA de compte rendu : des notes brutes à un CR structuré (décisions, actions, échéances), relecture humaine et règles CNIL si vous enregistrez.</span></span>
+      <span class="article-arrow">→</span>
+    </a>
+    <a href="/agent-ia-trier-emails-n8n" class="article-item">
+      <span class="article-text"><span class="article-title">Agent IA pour trier ses emails avec n8n : architecture, étapes et limites</span><span class="article-desc">Construire un agent IA de tri d&#x27;emails avec n8n : classification, étiquettes, brouillons validés par un humain, journal de contrôle et risques.</span></span>
+      <span class="article-arrow">→</span>
+    </a>
+  </div>
+  <h2 class="theme">Conformité et bonnes pratiques</h2>
+  <div class="article-list">
+    <a href="/ai-act-pme-agent-ia-obligations-2026" class="article-item">
+      <span class="article-text"><span class="article-title">AI Act : ce qu&#x27;une PME qui utilise un agent IA doit faire en 2026</span><span class="article-desc">AI Act : transparence depuis le 2 août 2026, maîtrise de l&#x27;IA, haut risque reporté à fin 2027. Ce que cela impose à une PME qui déploie un agent IA.</span></span>
+      <span class="article-arrow">→</span>
+    </a>
+    <a href="/erreurs-agent-ia" class="article-item">
+      <span class="article-text"><span class="article-title">Les 5 erreurs à éviter quand on déploie un agent IA en entreprise</span><span class="article-desc">Déployer un agent IA sans tomber dans les pièges classiques : les 5 erreurs les plus fréquentes en entreprise et comment les éviter dès le départ.</span></span>
+      <span class="article-arrow">→</span>
+    </a>
+  </div>
+  <h2 class="theme">Choisir ses outils et démarrer</h2>
+  <div class="article-list">
+    <a href="/meilleurs-outils-agent-ia-sans-developpeur" class="article-item">
+      <span class="article-text"><span class="article-title">Les meilleurs outils pour déployer un agent IA sans développeur</span><span class="article-desc">Comparatif des meilleurs outils no-code pour déployer un agent IA : n8n, Make, Zapier, Relevance AI. Avantages, limites et cas d&#x27;usage.</span></span>
+      <span class="article-arrow">→</span>
+    </a>
+    <a href="/autogpt-crewai-n8n-quel-agent-choisir" class="article-item">
+      <span class="article-text"><span class="article-title">AutoGPT, CrewAI, n8n : quel agent IA choisir selon ton métier ?</span><span class="article-desc">Comparatif AutoGPT vs CrewAI vs n8n : lequel choisir selon votre profil et votre métier ? Guide pratique pour choisir le bon framework d'agents IA.</span></span>
+      <span class="article-arrow">→</span>
+    </a>
+    <a href="/agent-ia-vs-chatbot-pme" class="article-item">
+      <span class="article-text"><span class="article-title">Agent IA vs chatbot : quelle différence concrète pour une PME ?</span><span class="article-desc">Chatbot ou agent IA autonome ? La différence réelle, ce que ça change pour une PME et comment choisir l&#x27;outil selon votre cas d&#x27;usage.</span></span>
+      <span class="article-arrow">→</span>
+    </a>
+    <a href="/agent-ia-pme-zero-budget" class="article-item">
+      <span class="article-text"><span class="article-title">Agent IA pour PME : par où commencer quand on a zéro budget</span><span class="article-desc">Comment déployer un premier agent IA utile sans budget : les outils gratuits, les cas d'usage accessibles, et la méthode pour ne pas se perdre.</span></span>
+      <span class="article-arrow">→</span>
+    </a>
+  </div>
+  <h2 class="theme">Panorama et tendances</h2>
+  <div class="article-list">
+    <a href="/agents-ia-bilan-2025" class="article-item">
+      <span class="article-text"><span class="article-title">Les agents IA en 2025 : ce qui a vraiment changé en 12 mois</span><span class="article-desc">Bilan des évolutions majeures des agents IA autonomes entre 2024 et 2025 : nouvelles capacités, nouveaux usages, et ce qui reste encore à résoudre.</span></span>
+      <span class="article-arrow">→</span>
+    </a>
+    <a href="/agents-ia-multimodaux" class="article-item">
+      <span class="article-text"><span class="article-title">Les agents IA multimodaux : quand l'IA lit vos images et vos PDF</span><span class="article-desc">Les agents IA multimodaux peuvent lire images, PDF et documents scannés. Ce que ça change concrètement pour les PME et les cas d'usage les plus utiles.</span></span>
+      <span class="article-arrow">→</span>
+    </a>
+    <a href="/agents-ia-remplacent-salarie" class="article-item">
+      <span class="article-text"><span class="article-title">Les 5 agents IA autonomes qui remplacent déjà un salarié en 2026</span><span class="article-desc">5 agents IA autonomes qui automatisent déjà des tâches entières : prospection, support client, rédaction, analyse de données. Cas concrets et limites.</span></span>
+      <span class="article-arrow">→</span>
+    </a>
+  </div>
+  <h2 class="theme">Ressource : pack de workflows</h2>
+  <div class="article-list">
+    <a href="/pack-agents-ia-n8n" class="article-item">
+      <span class="article-text"><span class="article-title">Confiez chaque matin le travail répétitif de votre entreprise à 5 assistants IA</span><span class="article-desc">5 workflows n8n prêts à importer : tri des e-mails, relance des factures impayées, SAV, veille concurrentielle et devis. Guide en français.</span></span>
+      <span class="article-arrow">→</span>
+    </a>
+  </div>
+</div>
+<div class="disclaimer">Le contenu de ce site est fourni à titre informatif uniquement et ne constitue pas un conseil juridique.</div>
+<footer><p>© 2026 AgentsAutonomes.ai — Tous droits réservés &nbsp;·&nbsp; <a href="/articles" style="color:inherit">Tous les articles</a> &nbsp;·&nbsp; <a href="/mentions-legales" style="color:inherit">Mentions légales</a> &nbsp;·&nbsp; <a href="/confidentialite" style="color:inherit">Confidentialité</a></p></footer>
+</body>
+</html>
