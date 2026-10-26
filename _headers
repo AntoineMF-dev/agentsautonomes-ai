@@ -9,3 +9,9 @@
   Cache-Control: public, max-age=604800
 /*.svg
   Cache-Control: public, max-age=604800
+
+/telechargements/*
+  X-Robots-Tag: noindex
+
+/inscription-confirmee
+  X-Robots-Tag: noindex
