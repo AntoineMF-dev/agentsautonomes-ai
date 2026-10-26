@@ -6,7 +6,14 @@
   <description>Les agents IA autonomes en pratique : cas d&#x27;usage, outils et garde-fous pour les PME.</description>
   <language>fr-FR</language>
   <atom:link href="https://agentsautonomes.ai/feed.xml" rel="self" type="application/rss+xml" />
-  <lastBuildDate>Mon, 19 Oct 2026 08:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 26 Oct 2026 08:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Agent IA d&#x27;accueil des nouveaux clients : mode d&#x27;emploi</title>
+    <link>https://agentsautonomes.ai/agent-ia-accueil-nouveaux-clients</link>
+    <guid isPermaLink="true">https://agentsautonomes.ai/agent-ia-accueil-nouveaux-clients</guid>
+    <pubDate>Mon, 26 Oct 2026 08:00:00 +0000</pubDate>
+    <description>Un agent IA qui prépare l&#x27;e-mail de bienvenue et les premières étapes de chaque nouveau client, avec relecture humaine et règles CNIL à respecter.</description>
+  </item>
   <item>
     <title>Agent IA de compte rendu de réunion : des notes brutes au CR validé</title>
     <link>https://agentsautonomes.ai/agent-ia-compte-rendu-de-reunion</link>
