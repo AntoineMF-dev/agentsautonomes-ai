@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /telechargements/
 Allow: /
 
 Sitemap: https://agentsautonomes.ai/sitemap.xml
