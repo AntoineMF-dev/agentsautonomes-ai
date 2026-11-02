@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agent IA de résumé quotidien de la boîte mail</title>
+  <meta name="description" content="Un agent IA qui résume chaque matin les e-mails non lus de la veille en une page : urgences, demandes, informations. Architecture, réglages et garde-fous." />
+  <link rel="canonical" href="https://agentsautonomes.ai/agent-ia-resume-quotidien-boite-mail" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #0d0f12; --surface: #151820; --border: #1e2230; --accent: #00e5a0; --accent-dim: rgba(0,229,160,0.12); --text: #e8eaf0; --muted: #6b7080; --heading: #ffffff; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.75; }
+    header { border-bottom: 1px solid var(--border); padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--accent); text-decoration: none; }
+    .logo span { color: var(--heading); }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-left: 2rem; }
+    .hero { max-width: 760px; margin: 4rem auto 0; padding: 0 2rem; }
+    .tag { display: inline-block; background: var(--accent-dim); color: var(--accent); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 2px; margin-bottom: 1.5rem; }
+    h1 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; color: var(--heading); line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 1.25rem; }
+    .meta { color: var(--muted); font-size: 0.85rem; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+    article { max-width: 760px; margin: 0 auto; padding: 0 2rem 6rem; }
+    h2 { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--heading); margin: 3rem 0 1rem; }
+    h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--heading); margin: 2rem 0 0.75rem; }
+    p { margin-bottom: 1.25rem; }
+    .tool { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 1.5rem; margin: 1.5rem 0; display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: start; }
+    .tool-info h3 { margin: 0 0 0.4rem; font-size: 1rem; }
+    .tool-info p { margin: 0; font-size: 0.9rem; color: var(--muted); }
+    .tool-price { font-family: 'Syne', sans-serif; font-weight: 700; color: var(--accent); font-size: 0.9rem; white-space: nowrap; }
+    blockquote { border-left: 2px solid var(--accent); padding: 1rem 1.5rem; margin: 2rem 0; color: var(--muted); font-style: italic; }
+    .cta-box { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 2.5rem; text-align: center; margin: 4rem 0 2rem; }
+    .cta-box h3 { font-family: 'Syne', sans-serif; font-size: 1.4rem; color: var(--heading); margin: 0 0 0.75rem; }
+    .cta-box p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .btn { display: inline-block; background: var(--accent); color: #0d0f12; font-weight: 600; padding: 0.85rem 2rem; border-radius: 3px; text-decoration: none; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; color: var(--muted); font-size: 0.8rem; }
+    @media (max-width: 640px) { .tool { grid-template-columns: 1fr; } nav { display: none; } .hero, article { padding-left: 1.25rem; padding-right: 1.25rem; } }
+  </style>
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="AgentsAutonomes.ai" />
+  <meta property="og:title" content="Agent IA de résumé quotidien de la boîte mail" />
+  <meta property="og:description" content="Un agent IA qui résume chaque matin les e-mails non lus de la veille en une page : urgences, demandes, informations. Architecture, réglages et garde-fous." />
+  <meta property="og:url" content="https://agentsautonomes.ai/agent-ia-resume-quotidien-boite-mail" />
+  <meta property="article:published_time" content="2026-11-02" />
+  <meta property="article:modified_time" content="2026-11-02" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Agent IA de résumé quotidien de la boîte mail" />
+  <meta name="twitter:description" content="Un agent IA qui résume chaque matin les e-mails non lus de la veille en une page : urgences, demandes, informations. Architecture, réglages et garde-fous." />
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Agent IA de résumé quotidien de la boîte mail", "description": "Un agent IA qui résume chaque matin les e-mails non lus de la veille en une page : urgences, demandes, informations. Architecture, réglages et garde-fous.", "inLanguage": "fr-FR", "mainEntityOfPage": "https://agentsautonomes.ai/agent-ia-resume-quotidien-boite-mail", "datePublished": "2026-11-02", "dateModified": "2026-11-02", "image": "https://agentsautonomes.ai/og-image.png", "author": {"@type": "Organization", "name": "AgentsAutonomes.ai", "url": "https://agentsautonomes.ai/"}, "publisher": {"@type": "Organization", "name": "AgentsAutonomes.ai", "url": "https://agentsautonomes.ai/"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://agentsautonomes.ai/"}, {"@type": "ListItem", "position": 2, "name": "Agent IA de résumé quotidien de la boîte mail", "item": "https://agentsautonomes.ai/agent-ia-resume-quotidien-boite-mail"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "L'agent répond-il aux e-mails ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Il lit les messages non lus et vous envoie un résumé, sans agir dans la boîte."}}, {"@type": "Question", "name": "Quelle différence avec le tri des e-mails ?", "acceptedAnswer": {"@type": "Answer", "text": "Le tri classe chaque e-mail à son arrivée et prépare des brouillons ; le résumé donne une vue d'ensemble chaque matin. Les deux se combinent."}}, {"@type": "Question", "name": "Faut-il des compétences techniques ?", "acceptedAnswer": {"@type": "Answer", "text": "Un outil sans code comme n8n ou Make suffit : un déclencheur horaire, la lecture des e-mails, un modèle de langage et un envoi d'e-mail."}}]}]</script>
+  <style id="seo-extra">
+.related{margin:3rem 0 2rem;padding-top:2rem;border-top:1px solid var(--border,#ddd)}
+.related h2{margin-top:0}
+.related ul{list-style:none;padding:0;margin:0;display:grid;gap:.75rem}
+.related a{display:block;padding:1rem 1.25rem;background:var(--surface,#fff);border:1px solid var(--border,#ddd);border-radius:4px;color:var(--accent,#1a3a5c);text-decoration:none;font-weight:600}
+.related a:hover{border-color:var(--accent,#1a3a5c)}
+</style>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0d0f12" />
+  <meta property="og:image" content="https://agentsautonomes.ai/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:image" content="https://agentsautonomes.ai/og-image.png" />
+  <link rel="alternate" type="application/rss+xml" title="AgentsAutonomes.ai" href="https://agentsautonomes.ai/feed.xml" />
+  <meta name="robots" content="max-image-preview:large" />
+
+<style>
+.nl-inline{margin:2rem 0;padding:1rem 1.25rem;border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:6px;display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between}
+.nl-inline p{margin:0!important;font-size:.95rem}
+.nl-inline a{font-weight:700;color:var(--accent);text-decoration:none;white-space:nowrap}
+.share{margin:1.5rem 0 0;display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;font-size:.85rem;color:var(--muted)}
+.share a,.share button{border:1px solid var(--border);border-radius:4px;padding:.35rem .7rem;color:inherit;text-decoration:none;background:none;font:inherit;cursor:pointer}
+.share a:hover,.share button:hover{color:var(--accent);border-color:var(--accent)}
+.sister{max-width:720px;margin:0 auto 2.5rem;padding:1.25rem 1.5rem;border:1px solid var(--border);border-radius:8px;font-size:.9rem;color:var(--muted)}
+.sister strong{color:var(--heading)}
+.sister a{color:var(--accent);font-weight:600;text-decoration:none}
+</style>
+</head>
+<body>
+<header>
+  <a href="/" class="logo">agents<span>autonomes</span>.ai</a>
+  <nav><a href="/">Accueil</a><a href="/#newsletter">Newsletter</a></nav>
+</header>
+<div class="hero">
+  <div class="tag">Productivité</div>
+  <h1>Agent IA de résumé quotidien de la boîte mail</h1>
+  <p class="meta">Octobre 2026 &nbsp;·&nbsp; 5 min de lecture</p>
+</div>
+<article>
+
+  <p>Ouvrir sa boîte mail le matin et trouver des dizaines de messages non lus, c'est perdre du temps avant même de commencer. Un agent IA peut lire ces messages pour vous et envoyer, chaque matin, un résumé d'une page : ce qui est urgent, ce qui demande une réponse, ce qui est juste pour information.</p>
+  <p><strong>Transparence :</strong> cet article décrit une architecture et des bonnes pratiques. Aucun gain chiffré n'est annoncé : mesurez-le sur votre propre boîte mail.</p>
+
+  <h2>Ce que fait l'agent, étape par étape</h2>
+  <ul style="margin:0 0 1.25rem 1.25rem"><li style="margin-bottom:.5rem"><strong>Déclencheur :</strong> chaque matin à heure fixe (par exemple 7 h 30), avant votre arrivée.</li><li style="margin-bottom:.5rem"><strong>Lecture :</strong> l'agent récupère les e-mails non lus des dernières 24 heures (expéditeur, objet, extrait).</li><li style="margin-bottom:.5rem"><strong>Synthèse :</strong> un modèle de langage les regroupe en trois rubriques : urgences, demandes à traiter, informations.</li><li style="margin-bottom:.5rem"><strong>Envoi :</strong> le résumé vous est envoyé par e-mail, à vous seul.</li><li style="margin-bottom:.5rem"><strong>Aucune action dans la boîte :</strong> l'agent ne déplace, ne supprime et ne répond à aucun message.</li></ul>
+
+  <div class="nl-inline"><p>🎁 Offert à l'inscription : le guide <strong>« 5 agents IA prêts à copier pour une PME »</strong> (PDF), puis un agent concret chaque semaine.</p><a href="https://03124398.sibforms.com/serve/MUIFAFoM4hHHdN91Irjh6RF7mz8A6AqR2L54ja7v11FdkFUrKPVjuO4hBA1Hdj2mA7E3m-qy5Ovrz7IEh31uVUu8ZAYDPbViiphznXEX52qH3pJnhe-T1twydxlFKp_mQdDWNf0rJgM9FrRKhjdtGIbDvvUkDEi6JUlCnSiT_rltLqIQQgnr-KeSklNvsvgtqaiH7cwOMr-bWRfIUg==" target="_blank" rel="noopener">Recevoir le guide →</a></div>
+  <h2>Résumé quotidien ou tri en continu ?</h2>
+  <div style="overflow-x:auto;margin:1.5rem 0"><table style="border-collapse:collapse;width:100%;font-size:.95rem"><tr><th style="text-align:left;padding:.5rem;border-bottom:1px solid var(--border)">Approche</th><th style="text-align:left;padding:.5rem;border-bottom:1px solid var(--border)">Principe</th><th style="text-align:left;padding:.5rem;border-bottom:1px solid var(--border)">Pour qui</th></tr><tr><td style="padding:.5rem;border-bottom:1px solid var(--border);vertical-align:top">Résumé quotidien</td><td style="padding:.5rem;border-bottom:1px solid var(--border);vertical-align:top">Une synthèse chaque matin, sans toucher à la boîte.</td><td style="padding:.5rem;border-bottom:1px solid var(--border);vertical-align:top">Ceux qui veulent une vue d'ensemble rapide, sans changer leurs habitudes.</td></tr><tr><td style="padding:.5rem;border-bottom:1px solid var(--border);vertical-align:top">Tri en continu</td><td style="padding:.5rem;border-bottom:1px solid var(--border);vertical-align:top">Chaque e-mail est classé et étiqueté à son arrivée, avec brouillons de réponse.</td><td style="padding:.5rem;border-bottom:1px solid var(--border);vertical-align:top">Ceux qui reçoivent beaucoup de demandes clients et prospects.</td></tr></table></div>
+  <p>Les deux se combinent bien : le tri range la boîte au fil de l'eau, le résumé donne la vue d'ensemble du matin.</p>
+
+  <h2>Les garde-fous indispensables</h2>
+  <ul style="margin:0 0 1.25rem 1.25rem"><li style="margin-bottom:.5rem"><strong>Lecture seule :</strong> donnez à l'agent les droits minimaux nécessaires et vérifiez qu'il n'agit pas sur les messages.</li><li style="margin-bottom:.5rem"><strong>Pas d'invention :</strong> demandez au modèle de ne résumer que ce qui figure dans les messages, et de citer l'expéditeur et l'objet pour chaque point.</li><li style="margin-bottom:.5rem"><strong>Messages sensibles :</strong> excluez les dossiers ou expéditeurs confidentiels (santé, RH, juridique) du périmètre de l'agent.</li><li style="margin-bottom:.5rem"><strong>Données personnelles :</strong> les e-mails transitent par le fournisseur du modèle de langage. Inscrivez le traitement dans votre <a href="https://assistantjuridique.ai/registre-traitements-rgpd-pme" style="color:var(--accent)">registre RGPD</a> et vérifiez les conditions de ce fournisseur.</li></ul>
+
+  <h2>Mise en place pas à pas</h2>
+  <ol style="margin:0 0 1.25rem 1.25rem">
+    <li style="margin-bottom:.5rem">Choisissez l'heure d'envoi et l'adresse qui recevra le résumé.</li>
+    <li style="margin-bottom:.5rem">Définissez les trois rubriques et la longueur maximale du résumé.</li>
+    <li style="margin-bottom:.5rem">Testez pendant une semaine en comparant le résumé avec votre boîte réelle.</li>
+    <li style="margin-bottom:.5rem">Ajustez les consignes : ce qui doit être signalé comme urgent, ce qui peut être ignoré.</li>
+  </ol>
+  <p>Pour ranger la boîte au fil de l'eau, lisez notre article sur <a href="/agent-ia-trier-emails-n8n" style="color:var(--accent)">l'agent IA de tri des e-mails avec n8n</a>, et pour suivre les décisions prises en réunion, <a href="/agent-ia-compte-rendu-de-reunion" style="color:var(--accent)">l'agent de compte rendu</a>.</p>
+
+  <h2>Questions fréquentes</h2>
+  <h3>L'agent répond-il aux e-mails ?</h3>
+  <p>Non. Il lit les messages non lus et vous envoie un résumé, sans agir dans la boîte.</p>
+  <h3>Quelle différence avec le tri des e-mails ?</h3>
+  <p>Le tri classe chaque e-mail à son arrivée et prépare des brouillons ; le résumé donne une vue d'ensemble chaque matin. Les deux se combinent.</p>
+  <h3>Faut-il des compétences techniques ?</h3>
+  <p>Un outil sans code comme n8n ou Make suffit : un déclencheur horaire, la lecture des e-mails, un modèle de langage et un envoi d'e-mail.</p>
+
+  <div class="nl-inline" style="border-left-color:var(--accent)"><p>🎁 <strong>Envie de commencer par le tri ?</strong> Notre workflow n8n de tri des e-mails est offert, avec son guide d'installation en français.</p><a href="/workflow-gratuit-tri-emails">Recevoir le workflow gratuit →</a></div>
+  <div class="cta-box">
+    <h3>Un agent concret chaque semaine</h3>
+    <p>Cas d'usage réels, outils testés, sans jargon technique.</p>
+    <a href="https://03124398.sibforms.com/serve/MUIFAFoM4hHHdN91Irjh6RF7mz8A6AqR2L54ja7v11FdkFUrKPVjuO4hBA1Hdj2mA7E3m-qy5Ovrz7IEh31uVUu8ZAYDPbViiphznXEX52qH3pJnhe-T1twydxlFKp_mQdDWNf0rJgM9FrRKhjdtGIbDvvUkDEi6JUlCnSiT_rltLqIQQgnr-KeSklNvsvgtqaiH7cwOMr-bWRfIUg==" target="_blank" rel="noopener" class="btn">Recevoir le guide des 5 agents IA →</a>
+  </div>
+  <div class="share" aria-label="Partager cet article">Partager : <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fagentsautonomes.ai%2Fagent-ia-resume-quotidien-boite-mail" target="_blank" rel="noopener">LinkedIn</a> <a href="https://x.com/intent/post?url=https%3A%2F%2Fagentsautonomes.ai%2Fagent-ia-resume-quotidien-boite-mail&amp;text=Agent%20IA%20de%20r%C3%A9sum%C3%A9%20quotidien%20de%20la%20bo%C3%AEte%20mail" target="_blank" rel="noopener">X</a> <a href="https://wa.me/?text=Agent%20IA%20de%20r%C3%A9sum%C3%A9%20quotidien%20de%20la%20bo%C3%AEte%20mail%20https%3A%2F%2Fagentsautonomes.ai%2Fagent-ia-resume-quotidien-boite-mail" target="_blank" rel="noopener">WhatsApp</a> <a href="mailto:?subject=Agent%20IA%20de%20r%C3%A9sum%C3%A9%20quotidien%20de%20la%20bo%C3%AEte%20mail&amp;body=Cet%20article%20devrait%20t%27int%C3%A9resser%20%3A%20https%3A%2F%2Fagentsautonomes.ai%2Fagent-ia-resume-quotidien-boite-mail">E-mail</a> <button type="button" class="share-copy" data-url="https://agentsautonomes.ai/agent-ia-resume-quotidien-boite-mail">Copier le lien</button></div>
+
+  <section class="related" aria-label="À lire aussi"><h2>À lire aussi</h2><ul><li><a href="/agent-ia-trier-emails-n8n">Agent IA pour trier ses emails avec n8n : architecture, étapes et limites</a></li><li><a href="/agent-ia-compte-rendu-de-reunion">Agent IA de compte rendu de réunion : des notes brutes au CR validé</a></li><li><a href="/agent-ia-accueil-nouveaux-clients">Agent IA d&#x27;accueil des nouveaux clients : mode d&#x27;emploi</a></li></ul></section>
+
+</article>
+<aside class="sister" aria-label="Du même éditeur"><strong>Du même éditeur :</strong> <a href="https://assistantjuridique.ai/?utm_source=agentsautonomes.ai&amp;utm_medium=referral&amp;utm_campaign=cross" rel="noopener">AssistantJuridique.ai</a> — L'IA juridique expliquée simplement pour les TPE et PME : contrats, RGPD, RH. <br><a href="https://modelefinance.ai/?utm_source=agentsautonomes.ai&amp;utm_medium=referral&amp;utm_campaign=cross" rel="noopener">modelefinance.ai</a> — Du P&amp;L au commentaire CODIR : outil gratuit et guides de reporting financier pour PME.</aside>
+<footer><p>© 2026 AgentsAutonomes.ai — Tous droits réservés &nbsp;·&nbsp; <a href="/mentions-legales" style="color:inherit">Mentions légales</a> &nbsp;·&nbsp; <a href="/confidentialite" style="color:inherit">Confidentialité</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/company/agentsautonomes" target="_blank" rel="noopener" style="color:inherit">LinkedIn</a></p></footer>
+<script>
+document.querySelectorAll('.share-copy').forEach(function(b){b.addEventListener('click',function(){
+  navigator.clipboard.writeText(b.dataset.url).then(function(){b.textContent='Lien copié ✓';setTimeout(function(){b.textContent='Copier le lien'},1800)});
+});});
+</script>
+</body>
+</html>

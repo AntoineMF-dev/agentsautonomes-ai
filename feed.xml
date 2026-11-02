@@ -6,7 +6,14 @@
   <description>Les agents IA autonomes en pratique : cas d&#x27;usage, outils et garde-fous pour les PME.</description>
   <language>fr-FR</language>
   <atom:link href="https://agentsautonomes.ai/feed.xml" rel="self" type="application/rss+xml" />
-  <lastBuildDate>Mon, 26 Oct 2026 08:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 02 Nov 2026 08:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Agent IA de résumé quotidien de la boîte mail</title>
+    <link>https://agentsautonomes.ai/agent-ia-resume-quotidien-boite-mail</link>
+    <guid isPermaLink="true">https://agentsautonomes.ai/agent-ia-resume-quotidien-boite-mail</guid>
+    <pubDate>Mon, 02 Nov 2026 08:00:00 +0000</pubDate>
+    <description>Un agent IA qui résume chaque matin les e-mails non lus de la veille en une page : urgences, demandes, informations. Architecture, réglages et garde-fous.</description>
+  </item>
   <item>
     <title>Agent IA d&#x27;accueil des nouveaux clients : mode d&#x27;emploi</title>
     <link>https://agentsautonomes.ai/agent-ia-accueil-nouveaux-clients</link>
