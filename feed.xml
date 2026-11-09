@@ -6,7 +6,14 @@
   <description>Les agents IA autonomes en pratique : cas d&#x27;usage, outils et garde-fous pour les PME.</description>
   <language>fr-FR</language>
   <atom:link href="https://agentsautonomes.ai/feed.xml" rel="self" type="application/rss+xml" />
-  <lastBuildDate>Mon, 02 Nov 2026 08:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 09 Nov 2026 08:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Agent IA de suivi des échéances de contrats</title>
+    <link>https://agentsautonomes.ai/agent-ia-echeances-contrats</link>
+    <guid isPermaLink="true">https://agentsautonomes.ai/agent-ia-echeances-contrats</guid>
+    <pubDate>Mon, 09 Nov 2026 08:00:00 +0000</pubDate>
+    <description>Un agent qui surveille vos contrats fournisseurs et vous alerte avant la date limite de résiliation. Architecture simple, réglages et garde-fous.</description>
+  </item>
   <item>
     <title>Agent autonome IA : définition, exemples et limites</title>
     <link>https://agentsautonomes.ai/agent-autonome-ia-definition-exemples</link>
