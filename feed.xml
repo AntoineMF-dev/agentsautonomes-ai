@@ -6,7 +6,14 @@
   <description>Les agents IA autonomes en pratique : cas d&#x27;usage, outils et garde-fous pour les PME.</description>
   <language>fr-FR</language>
   <atom:link href="https://agentsautonomes.ai/feed.xml" rel="self" type="application/rss+xml" />
-  <lastBuildDate>Mon, 09 Nov 2026 08:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 16 Nov 2026 08:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Agent IA de recyclage de contenu : un article, 3 formats</title>
+    <link>https://agentsautonomes.ai/agent-ia-recyclage-contenu</link>
+    <guid isPermaLink="true">https://agentsautonomes.ai/agent-ia-recyclage-contenu</guid>
+    <pubDate>Mon, 16 Nov 2026 08:00:00 +0000</pubDate>
+    <description>Un agent IA qui transforme chaque nouvel article de blog en brouillons de post LinkedIn et de paragraphe de newsletter, relus avant publication.</description>
+  </item>
   <item>
     <title>Agent IA de suivi des échéances de contrats</title>
     <link>https://agentsautonomes.ai/agent-ia-echeances-contrats</link>
