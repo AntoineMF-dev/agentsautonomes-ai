@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agent IA pour les notes de frais : du ticket à la compta</title>
+  <meta name="description" content="Un agent IA qui lit les justificatifs de frais, les classe, contrôle vos règles internes et prépare la note pour validation. Architecture et garde-fous." />
+  <link rel="canonical" href="https://agentsautonomes.ai/agent-ia-notes-de-frais" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #0d0f12; --surface: #151820; --border: #1e2230; --accent: #00e5a0; --accent-dim: rgba(0,229,160,0.12); --text: #e8eaf0; --muted: #6b7080; --heading: #ffffff; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.75; }
+    header { border-bottom: 1px solid var(--border); padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--accent); text-decoration: none; }
+    .logo span { color: var(--heading); }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-left: 2rem; }
+    .hero { max-width: 760px; margin: 4rem auto 0; padding: 0 2rem; }
+    .tag { display: inline-block; background: var(--accent-dim); color: var(--accent); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 2px; margin-bottom: 1.5rem; }
+    h1 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; color: var(--heading); line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 1.25rem; }
+    .meta { color: var(--muted); font-size: 0.85rem; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+    article { max-width: 760px; margin: 0 auto; padding: 0 2rem 6rem; }
+    h2 { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--heading); margin: 3rem 0 1rem; }
+    h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--heading); margin: 2rem 0 0.75rem; }
+    p { margin-bottom: 1.25rem; }
+    .tool { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 1.5rem; margin: 1.5rem 0; display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: start; }
+    .tool-info h3 { margin: 0 0 0.4rem; font-size: 1rem; }
+    .tool-info p { margin: 0; font-size: 0.9rem; color: var(--muted); }
+    .tool-price { font-family: 'Syne', sans-serif; font-weight: 700; color: var(--accent); font-size: 0.9rem; white-space: nowrap; }
+    blockquote { border-left: 2px solid var(--accent); padding: 1rem 1.5rem; margin: 2rem 0; color: var(--muted); font-style: italic; }
+    .cta-box { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 2.5rem; text-align: center; margin: 4rem 0 2rem; }
+    .cta-box h3 { font-family: 'Syne', sans-serif; font-size: 1.4rem; color: var(--heading); margin: 0 0 0.75rem; }
+    .cta-box p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .btn { display: inline-block; background: var(--accent); color: #0d0f12; font-weight: 600; padding: 0.85rem 2rem; border-radius: 3px; text-decoration: none; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; color: var(--muted); font-size: 0.8rem; }
+    @media (max-width: 640px) { .tool { grid-template-columns: 1fr; } nav { display: none; } .hero, article { padding-left: 1.25rem; padding-right: 1.25rem; } }
+  </style>
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="AgentsAutonomes.ai" />
+  <meta property="og:title" content="Agent IA pour les notes de frais : du ticket à la compta" />
+  <meta property="og:description" content="Un agent IA qui lit les justificatifs de frais, les classe, contrôle vos règles internes et prépare la note pour validation. Architecture et garde-fous." />
+  <meta property="og:url" content="https://agentsautonomes.ai/agent-ia-notes-de-frais" />
+  <meta property="article:published_time" content="2026-11-23" />
+  <meta property="article:modified_time" content="2026-11-23" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Agent IA pour les notes de frais : du ticket à la compta" />
+  <meta name="twitter:description" content="Un agent IA qui lit les justificatifs de frais, les classe, contrôle vos règles internes et prépare la note pour validation. Architecture et garde-fous." />
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Agent IA pour les notes de frais : du ticket à la compta", "description": "Un agent IA qui lit les justificatifs de frais, les classe, contrôle vos règles internes et prépare la note pour validation. Architecture et garde-fous.", "inLanguage": "fr-FR", "mainEntityOfPage": "https://agentsautonomes.ai/agent-ia-notes-de-frais", "datePublished": "2026-11-23", "dateModified": "2026-11-23", "image": "https://agentsautonomes.ai/og-image.png", "author": {"@type": "Organization", "name": "AgentsAutonomes.ai", "url": "https://agentsautonomes.ai/", "sameAs": ["https://www.linkedin.com/company/agentsautonomes"]}, "publisher": {"@type": "Organization", "name": "AgentsAutonomes.ai", "url": "https://agentsautonomes.ai/", "sameAs": ["https://www.linkedin.com/company/agentsautonomes"]}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://agentsautonomes.ai/"}, {"@type": "ListItem", "position": 2, "name": "Agent IA pour les notes de frais : du ticket à la compta", "item": "https://agentsautonomes.ai/agent-ia-notes-de-frais"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "L'IA peut-elle lire une photo de ticket ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, les modèles de langage récents lisent les images. La qualité de la photo compte : un ticket froissé ou flou doit être signalé, pas deviné."}}, {"@type": "Question", "name": "L'agent peut-il rembourser automatiquement ?", "acceptedAnswer": {"@type": "Answer", "text": "Non, le remboursement reste soumis à la validation du manager et de la comptabilité."}}, {"@type": "Question", "name": "Faut-il un logiciel de notes de frais ?", "acceptedAnswer": {"@type": "Answer", "text": "Non pour démarrer : un tableur suffit. L'agent peut aussi alimenter un logiciel existant s'il dispose d'une API ou d'un import."}}]}]</script>
+  <style id="seo-extra">
+.related{margin:3rem 0 2rem;padding-top:2rem;border-top:1px solid var(--border,#ddd)}
+.related h2{margin-top:0}
+.related ul{list-style:none;padding:0;margin:0;display:grid;gap:.75rem}
+.related a{display:block;padding:1rem 1.25rem;background:var(--surface,#fff);border:1px solid var(--border,#ddd);border-radius:4px;color:var(--accent,#1a3a5c);text-decoration:none;font-weight:600}
+.related a:hover{border-color:var(--accent,#1a3a5c)}
+</style>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0d0f12" />
+  <meta property="og:image" content="https://agentsautonomes.ai/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:image" content="https://agentsautonomes.ai/og-image.png" />
+  <link rel="alternate" type="application/rss+xml" title="AgentsAutonomes.ai" href="https://agentsautonomes.ai/feed.xml" />
+  <meta name="robots" content="max-image-preview:large" />
+
+<style>
+.nl-inline{margin:2rem 0;padding:1rem 1.25rem;border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:6px;display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between}
+.nl-inline p{margin:0!important;font-size:.95rem}
+.nl-inline a{font-weight:700;color:var(--accent);text-decoration:none;white-space:nowrap}
+.share{margin:1.5rem 0 0;display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;font-size:.85rem;color:var(--muted)}
+.share a,.share button{border:1px solid var(--border);border-radius:4px;padding:.35rem .7rem;color:inherit;text-decoration:none;background:none;font:inherit;cursor:pointer}
+.share a:hover,.share button:hover{color:var(--accent);border-color:var(--accent)}
+.sister{max-width:720px;margin:0 auto 2.5rem;padding:1.25rem 1.5rem;border:1px solid var(--border);border-radius:8px;font-size:.9rem;color:var(--muted)}
+.sister strong{color:var(--heading)}
+.sister a{color:var(--accent);font-weight:600;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="promo-bar" style="background:#00e5a0;color:#0d0f12;text-align:center;font:600 14px/1.4 Inter,system-ui,sans-serif;padding:.55rem 1rem">🎁 Offert : le workflow n8n qui trie vos e-mails avec l'IA, guide inclus. <a href="/workflow-gratuit-tri-emails" style="color:#0d0f12;text-decoration:underline;font-weight:700;white-space:nowrap">Le recevoir gratuitement →</a></div>
+<header>
+  <a href="/" class="logo">agents<span>autonomes</span>.ai</a>
+  <nav><a href="/">Accueil</a><a href="/#newsletter">Newsletter</a></nav>
+</header>
+<div class="hero">
+  <div class="tag">Finance</div>
+  <h1>Agent IA pour les notes de frais : du ticket à la compta</h1>
+  <p class="meta">Novembre 2026 &nbsp;·&nbsp; 5 min de lecture</p>
+</div>
+<article>
+
+  <p>Les notes de frais font perdre du temps à tout le monde : le salarié qui photographie et ressaisit ses tickets, le manager qui valide, la comptabilité qui contrôle et impute. Un agent IA peut prendre en charge la partie répétitive, en laissant la validation aux personnes concernées.</p>
+  <p><strong>Transparence :</strong> cet article décrit une architecture et des bonnes pratiques. Aucun gain chiffré n'est annoncé : mesurez-le sur vos propres notes de frais.</p>
+
+  <h2>Ce que fait l'agent, étape par étape</h2>
+  <ul style="margin:0 0 1.25rem 1.25rem"><li style="margin-bottom:.5rem"><strong>Réception :</strong> le salarié envoie la photo du ticket ou la facture PDF à une adresse e-mail dédiée ou dans un dossier partagé.</li><li style="margin-bottom:.5rem"><strong>Lecture :</strong> un modèle de langage capable de lire les images extrait la date, le fournisseur, le montant TTC, la TVA et la nature de la dépense.</li><li style="margin-bottom:.5rem"><strong>Classement :</strong> l'agent propose une catégorie (repas, transport, hébergement…) et le compte comptable correspondant.</li><li style="margin-bottom:.5rem"><strong>Contrôle :</strong> il vérifie vos règles internes (plafonds, justificatif lisible, date dans la période) et signale les anomalies.</li><li style="margin-bottom:.5rem"><strong>Préparation :</strong> il ajoute une ligne au tableur ou à l'outil de notes de frais, en attente de validation.</li><li style="margin-bottom:.5rem"><strong>Validation :</strong> le manager puis la comptabilité valident ou corrigent.</li></ul>
+
+  <div class="nl-inline"><p>🎁 Offert à l'inscription : le guide <strong>« 5 agents IA prêts à copier pour une PME »</strong> (PDF), puis un agent concret chaque semaine.</p><a href="https://03124398.sibforms.com/serve/MUIFAFoM4hHHdN91Irjh6RF7mz8A6AqR2L54ja7v11FdkFUrKPVjuO4hBA1Hdj2mA7E3m-qy5Ovrz7IEh31uVUu8ZAYDPbViiphznXEX52qH3pJnhe-T1twydxlFKp_mQdDWNf0rJgM9FrRKhjdtGIbDvvUkDEi6JUlCnSiT_rltLqIQQgnr-KeSklNvsvgtqaiH7cwOMr-bWRfIUg==" target="_blank" rel="noopener">Recevoir le guide →</a></div>
+  <h2>Ce que l'agent fait bien, ce qu'il ne doit pas faire</h2>
+  <div style="overflow-x:auto;margin:1.5rem 0"><table style="border-collapse:collapse;width:100%;font-size:.95rem"><thead><tr><th style="text-align:left;padding:.5rem;border-bottom:1px solid var(--border)">L'agent peut</th><th style="text-align:left;padding:.5rem;border-bottom:1px solid var(--border)">L'agent ne doit pas</th></tr></thead><tbody><tr><td style="padding:.5rem;border-bottom:1px solid var(--border);vertical-align:top">Lire et ressaisir les informations des justificatifs</td><td style="padding:.5rem;border-bottom:1px solid var(--border);vertical-align:top">Valider seul une dépense</td></tr><tr><td style="padding:.5rem;border-bottom:1px solid var(--border);vertical-align:top">Proposer une catégorie et un compte</td><td style="padding:.5rem;border-bottom:1px solid var(--border);vertical-align:top">Décider seul d'une exception à vos règles</td></tr><tr><td style="padding:.5rem;border-bottom:1px solid var(--border);vertical-align:top">Signaler un ticket illisible ou un dépassement de plafond</td><td style="padding:.5rem;border-bottom:1px solid var(--border);vertical-align:top">Supprimer ou modifier un justificatif</td></tr></tbody></table></div>
+
+  <h2>Les garde-fous indispensables</h2>
+  <ul style="margin:0 0 1.25rem 1.25rem"><li style="margin-bottom:.5rem"><strong>Vérification des montants :</strong> une erreur de lecture sur un montant ou une TVA arrive. Le contrôle humain reste obligatoire, au moins sur les montants élevés.</li><li style="margin-bottom:.5rem"><strong>Conservation des justificatifs :</strong> gardez les originaux ou leur copie fidèle aussi longtemps que la loi l'exige, voir <a href="https://assistantjuridique.ai/duree-conservation-documents-entreprise" style="color:var(--accent)">les durées de conservation des documents d'entreprise</a>.</li><li style="margin-bottom:.5rem"><strong>Données personnelles :</strong> les notes de frais révèlent des déplacements et des habitudes. Limitez les accès et inscrivez le traitement dans votre <a href="https://assistantjuridique.ai/registre-traitements-rgpd-pme" style="color:var(--accent)">registre RGPD</a>.</li><li style="margin-bottom:.5rem"><strong>Règles écrites :</strong> l'agent ne peut contrôler que ce qui est écrit. Formalisez votre politique de frais avant de l'automatiser.</li></ul>
+
+  <h2>Mise en place pas à pas</h2>
+  <ol style="margin:0 0 1.25rem 1.25rem">
+    <li style="margin-bottom:.5rem">Écrivez votre politique de frais : catégories, plafonds, justificatifs exigés.</li>
+    <li style="margin-bottom:.5rem">Créez l'adresse ou le dossier de réception et le tableur de suivi.</li>
+    <li style="margin-bottom:.5rem">Construisez le flux dans n8n ou Make : réception, lecture par le modèle, contrôle, ajout au tableur.</li>
+    <li style="margin-bottom:.5rem">Testez sur un mois de notes de frais passées et comparez avec la saisie manuelle.</li>
+  </ol>
+  <p>Pour les factures des fournisseurs, lisez <a href="/agent-ia-factures-fournisseurs" style="color:var(--accent)">l'agent IA de traitement des factures fournisseurs</a>, et pour la comptabilité au sens large, <a href="/agent-ia-comptabilite" style="color:var(--accent)">l'agent IA en comptabilité</a>.</p>
+
+  <h2>Questions fréquentes</h2>
+  <h3>L'IA peut-elle lire une photo de ticket ?</h3>
+  <p>Oui, les modèles de langage récents lisent les images. La qualité de la photo compte : un ticket froissé ou flou doit être signalé, pas deviné.</p>
+  <h3>L'agent peut-il rembourser automatiquement ?</h3>
+  <p>Non, le remboursement reste soumis à la validation du manager et de la comptabilité.</p>
+  <h3>Faut-il un logiciel de notes de frais ?</h3>
+  <p>Non pour démarrer : un tableur suffit. L'agent peut aussi alimenter un logiciel existant s'il dispose d'une API ou d'un import.</p>
+
+
+  <div class="cta-box">
+    <h3>Un agent concret chaque semaine</h3>
+    <p>Cas d'usage réels, outils testés, sans jargon technique.</p>
+    <a href="https://03124398.sibforms.com/serve/MUIFAFoM4hHHdN91Irjh6RF7mz8A6AqR2L54ja7v11FdkFUrKPVjuO4hBA1Hdj2mA7E3m-qy5Ovrz7IEh31uVUu8ZAYDPbViiphznXEX52qH3pJnhe-T1twydxlFKp_mQdDWNf0rJgM9FrRKhjdtGIbDvvUkDEi6JUlCnSiT_rltLqIQQgnr-KeSklNvsvgtqaiH7cwOMr-bWRfIUg==" target="_blank" rel="noopener" class="btn">Recevoir le guide des 5 agents IA →</a>
+  </div>
+  <div class="share" aria-label="Partager cet article">Partager : <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fagentsautonomes.ai%2Fagent-ia-notes-de-frais" target="_blank" rel="noopener">LinkedIn</a> <a href="https://x.com/intent/post?url=https%3A%2F%2Fagentsautonomes.ai%2Fagent-ia-notes-de-frais&amp;text=Agent%20IA%20pour%20les%20notes%20de%20frais%20%3A%20du%20ticket%20%C3%A0%20la%20compta" target="_blank" rel="noopener">X</a> <a href="https://wa.me/?text=Agent%20IA%20pour%20les%20notes%20de%20frais%20%3A%20du%20ticket%20%C3%A0%20la%20compta%20https%3A%2F%2Fagentsautonomes.ai%2Fagent-ia-notes-de-frais" target="_blank" rel="noopener">WhatsApp</a> <a href="mailto:?subject=Agent%20IA%20pour%20les%20notes%20de%20frais%20%3A%20du%20ticket%20%C3%A0%20la%20compta&amp;body=Cet%20article%20devrait%20t%27int%C3%A9resser%20%3A%20https%3A%2F%2Fagentsautonomes.ai%2Fagent-ia-notes-de-frais">E-mail</a> <button type="button" class="share-copy" data-url="https://agentsautonomes.ai/agent-ia-notes-de-frais">Copier le lien</button></div>
+
+  <section class="related" aria-label="À lire aussi"><h2>À lire aussi</h2><ul><li><a href="/agent-ia-factures-fournisseurs">Agent IA pour traiter les factures fournisseurs : architecture et garde-fous</a></li><li><a href="/agent-ia-comptabilite">Agent IA et comptabilité : automatiser la saisie et les rapprochements</a></li><li><a href="/agent-ia-echeances-contrats">Agent IA de suivi des échéances de contrats</a></li></ul></section>
+
+</article>
+<aside class="sister" aria-label="Du même éditeur"><strong>Du même éditeur :</strong> <a href="https://assistantjuridique.ai/?utm_source=agentsautonomes.ai&amp;utm_medium=referral&amp;utm_campaign=cross" rel="noopener">AssistantJuridique.ai</a> — L'IA juridique expliquée simplement pour les TPE et PME : contrats, RGPD, RH. <br><a href="https://modelefinance.ai/?utm_source=agentsautonomes.ai&amp;utm_medium=referral&amp;utm_campaign=cross" rel="noopener">modelefinance.ai</a> — Du P&amp;L au commentaire CODIR : outil gratuit et guides de reporting financier pour PME.</aside>
+<footer><p>© 2026 AgentsAutonomes.ai — Tous droits réservés &nbsp;·&nbsp; <a href="/mentions-legales" style="color:inherit">Mentions légales</a> &nbsp;·&nbsp; <a href="/confidentialite" style="color:inherit">Confidentialité</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/company/agentsautonomes" target="_blank" rel="noopener" style="color:inherit">LinkedIn</a></p></footer>
+<script>
+document.querySelectorAll('.share-copy').forEach(function(b){b.addEventListener('click',function(){
+  navigator.clipboard.writeText(b.dataset.url).then(function(){b.textContent='Lien copié ✓';setTimeout(function(){b.textContent='Copier le lien'},1800)});
+});});
+</script>
+</body>
+</html>

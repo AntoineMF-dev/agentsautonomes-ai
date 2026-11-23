@@ -6,7 +6,14 @@
   <description>Les agents IA autonomes en pratique : cas d&#x27;usage, outils et garde-fous pour les PME.</description>
   <language>fr-FR</language>
   <atom:link href="https://agentsautonomes.ai/feed.xml" rel="self" type="application/rss+xml" />
-  <lastBuildDate>Mon, 16 Nov 2026 08:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 23 Nov 2026 08:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Agent IA pour les notes de frais : du ticket à la compta</title>
+    <link>https://agentsautonomes.ai/agent-ia-notes-de-frais</link>
+    <guid isPermaLink="true">https://agentsautonomes.ai/agent-ia-notes-de-frais</guid>
+    <pubDate>Mon, 23 Nov 2026 08:00:00 +0000</pubDate>
+    <description>Un agent IA qui lit les justificatifs de frais, les classe, contrôle vos règles internes et prépare la note pour validation. Architecture et garde-fous.</description>
+  </item>
   <item>
     <title>Agent IA de recyclage de contenu : un article, 3 formats</title>
     <link>https://agentsautonomes.ai/agent-ia-recyclage-contenu</link>
